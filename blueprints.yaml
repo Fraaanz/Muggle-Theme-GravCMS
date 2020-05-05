@@ -7,11 +7,11 @@ icon: rebel
 author:
   name: Franz Mattuschka
   email: hello@franzmattuschka.com
-homepage: https://github.com/#12696472/grav-theme-muggle-theme
-demo: http://demo.yoursite.com
+homepage: https://github.com/Fraaanz/Muggle-Theme-GravCMS
+demo: https://github.com/Fraaanz/Muggle-Theme-GravCMS
 keywords: grav, theme, etc
-bugs: https://github.com/#12696472/grav-theme-muggle-theme/issues
-readme: https://github.com/#12696472/grav-theme-muggle-theme/blob/develop/README.md
+bugs: https://github.com/Fraaanz/Muggle-Theme-GravCMS/issues
+readme: https://github.com/Fraaanz/Muggle-Theme-GravCMS/blob/master/README.md
 license: MIT
 
 dependencies:
