@@ -1,0 +1,107 @@
+{% extends 'modules/base.html.twig' %}
+
+{% block content %}
+<!-- Modul: Header -->
+<header>
+    <a href="index.html" class="sitetitle">
+        <span>{{ site.title|e('html') }}</span>
+    </a>
+    <svg id="nav-menubutton" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M1,7l30,0c0.6,0,1-0.4,1-1s-0.4-1-1-1L1,5C0.4,5,0,5.4,0,6C0,6.6,0.4,7,1,7z"/><path d="M31,14.5l-30,1c-0.6,0-1,0.5-1,1s0.5,1,1,1l30-1c0.6,0,1-0.5,1-1C32,14.9,31.5,14.5,31,14.5z"/><path d="M31,25.8l-30-1.6c-0.6,0-1,0.4-1.1,0.9c0,0.6,0.4,1,0.9,1.1l30,1.6c0.6,0,1-0.4,1.1-0.9 C32,26.3,31.6,25.8,31,25.8z"/></svg>
+    <div id="nav-wrapper" class="nav-wrapper-close">
+        {% block header_navigation %}
+        <nav id="nav" class="nav-close">
+            {% include 'modules/navigation.html.twig' %}
+            <svg id="nav-closebutton" enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M17.459,16.014l8.239-8.194c0.395-0.391,0.395-1.024,0-1.414c-0.394-0.391-1.034-0.391-1.428,0  l-8.232,8.187L7.73,6.284c-0.394-0.395-1.034-0.395-1.428,0c-0.394,0.396-0.394,1.037,0,1.432l8.302,8.303l-8.332,8.286  c-0.394,0.391-0.394,1.024,0,1.414c0.394,0.391,1.034,0.391,1.428,0l8.325-8.279l8.275,8.276c0.394,0.395,1.034,0.395,1.428,0  c0.394-0.396,0.394-1.037,0-1.432L17.459,16.014z" fill="#121313" /><g/><g/><g/><g/><g/><g/></svg>
+            <div id="nav-closearea"></div>
+        </nav>
+        {% endblock %}
+    </div>
+</header>
+
+<!-- Modul: image stage -->
+<section class="m-stage">
+    <div class="m-stage-title">
+        <h1 class="js-ani-scroll">
+            {{ page.title}}
+        </h1>
+        <p class="js-ani-scroll">
+            {{ page.content }}        </p>
+        <a class="button" href=".">
+            Listen now
+        </a>
+    </div>
+    <picture>
+        <!--<source media="(min-width: 768px)" srcset="src/media/stage/stage-l.jpg, src/media/stage/stage-l-2x.jpg 2x">
+        <source media="(min-width: 320px)" srcset="src/media/stage/stage-s.jpg,  src/media/stage/stage-s-2x.jpg 2x">-->
+        <img src="src/media/meeting-muggles-podcast-header.jpg" srcset="src/media/meeting-muggles-podcast-header.jpg 2x" alt="Titelbild">
+   </picture>
+</section>
+
+<!-- Modul: text monolith -->
+<section class="m-text-monolith">
+    <div class="w-80">
+        <h2>
+            Headline Two
+        </h2>
+        <h3>
+            Headline Three
+        </h3>
+        <h4>
+            Headline Four
+        </h4>
+        <h5>
+            Headline Five
+        </h5>
+        <h6>
+            Headline Six
+        </h6>
+        <p >
+            Simple Paragraph. Lorem ipsum dolor sit amet magna aliquyam <strong>Important strong</strong> <i>Italic</i> sed diam nonumy eirmod tempor <a href=".">I'm a simple Link</a> invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et duo dolores et ea rebum: <q>After this paragraph is a distance divider:</q>
+        </p>
+        <hr><!-- Add hr-Tag structure your text with more space between - - - - - - - -->
+        <h2>
+            Headline Two
+        </h2>
+        <p>
+            You can struckture your Sections (Text, Image, Gallery, Video, Map, ... ) by adding:<br><code>&#x3c;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6c;&#x61;&#x73;&#x73;&#x3d;&#x22;&#x73;&#x65;&#x63;&#x74;&#x69;&#x6f;&#x6e;&#x73;&#x70;&#x61;&#x63;&#x65;&#x72;&#x2d;&#x64;&#x6f;&#x75;&#x62;&#x6c;&#x65;&#x22;&#x3e;&#x3c;&#x2f;&#x64;&#x69;&#x76;&#x3e;</code><br>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor nvidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren?
+        </p>
+        <ol>
+            <li>lorem ipsum dolor sit amet</li>
+            <li>consetetur sadipscing elitr</li>
+            <li>sed diam nonumy eirmod</li>
+        </ol>
+        <p>
+            Simple Paragraph. Sed diam nonumy eirmod tempor invidunt!
+        </p>
+        <ul>
+            <li>lorem ipsum dolor sit amet</li>
+            <li>consetetur sadipscing elitr</li>
+            <li>sed diam nonumy eirmod</li>
+        </ul>
+        <a class="link" href=".">Single link one</a>
+        <a class="link link-two" href=".">Single link two</a>
+        <p>
+            Simple Paragraph. Lorem ipsum dolor sit <em>highlighted letters</em>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
+        </p>            
+        <p>
+            <em>Highlight Paragaph Text – Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren?</em>
+        </p>
+        <p>
+            Buttons:
+        </p> 
+        <a class="button" href=".">Button One</a>
+        <a class="button button-two" href="."> Button Two</a>
+        <a class="button button-inv" href="."> Button Inv</a>
+    </div>
+</section>
+
+<!-- Modul: image -->
+  <section class="m-media">
+      <picture class="w-80 o-left">
+        <source media="(min-width: 769px)" srcset="src/media/images/image-placeholder-l.jpg,  src/media/images/image-placeholder-l-2x.jpg 2x">
+        <source media="(min-width: 320px)" srcset="src/media/images/image-placeholder-s.jpg,  src/media/images/image-placeholder-s-2x.jpg 2x">
+        <img src="src/media/images/image-placeholder-l.jpg" srcset="src/media/images/image-placeholder-l-2x.jpg 2x">
+    </picture>
+  </section>
+
+{% endblock %}

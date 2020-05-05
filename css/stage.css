@@ -1,0 +1,27 @@
+.m-stage {
+    background-color: #f7d01b;
+    overflow: hidden;
+    padding-top: 2rem;
+}
+
+.m-stage-title {
+    z-index: 2;
+    margin: 1rem 1rem 3rem;
+    width: 80%;
+}
+
+.m-stage-title p {
+    width: 70%;
+}
+
+.m-stage picture {
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    z-index: 1;
+}
+
+.m-stage picture img {
+    width: 40vw;
+    max-width: 214px;
+}

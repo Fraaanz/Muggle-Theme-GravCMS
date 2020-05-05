@@ -1,0 +1,52 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+    
+    <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+        
+		<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+        {% block stylesheets %}
+            {% do assets.addCss('theme://css/main.css') %}
+            {% do assets.addCss('theme://css/modules.css') %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% do assets.addJs('jquery', 100) %}
+            {% do assets.addJs('theme://js/animations.js', 99) %}
+            {% do assets.addJs('theme://js/header-footer.js', 98) %}
+        {% endblock %}
+
+        {% block assets deferred %}
+            {{ assets.css()|raw }}
+            {{ assets.js()|raw }}
+        {% endblock %}
+
+</head>
+<body class="{{ page.header.body_classes }}">
+
+{% block content %}{% endblock %}
+
+<footer>
+    <a href="index.html" class="sitetitle">
+        <span>Meeting Muggles</span>
+    </a>
+    <nav>
+        <ul>
+            <li>
+                <a href="impressum.html">
+                    Impressum und Datenschutz
+                </a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+
+{% block bottom %}
+    {{ assets.js('bottom')|raw }}
+{% endblock %}
+
+</body>
+</html>
