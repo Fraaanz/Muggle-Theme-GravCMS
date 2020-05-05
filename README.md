@@ -1,14 +1,14 @@
-# Muggle Theme – 0.1
+# 🧙‍♂️ Muggle Theme – 0.1
 
 The **Muggle Theme** Theme is for [Grav CMS](http://github.com/getgrav/grav).
 
 (Stable with Grav v1.6.24)
 
-## Description
+## 📖 Description
 
 Simple podcast landing page theme.
 
-## Build process
+## 🏗 Build process
 
 Require additional Node modules: 
 - gulp (v4.0.2)
@@ -17,7 +17,7 @@ Require additional Node modules:
 
 (Stable with Node v8.17.0)
 
-## License
+## ⚖️ License
 
 The MIT License (MIT)
 
