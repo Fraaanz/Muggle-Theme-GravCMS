@@ -1,4 +1,4 @@
-# Muggle Theme Theme – 0.1
+# Muggle Theme – 0.1
 
 The **Muggle Theme** Theme is for [Grav CMS](http://github.com/getgrav/grav).
 
