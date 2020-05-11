@@ -1,6 +1,6 @@
 
 ### Home
----
+
 * Titel
 * Subheadline
 * Subscribe Links
@@ -17,7 +17,7 @@
 
 ---
 ### Episonden Seite
----
+
 * Image
 * Player
 * Subscribe Links
@@ -32,34 +32,34 @@
 
 ---
 ### Über den Podcast
----
+
 * Textmodul
 
 ---
 ### Über mich
----
+
 * Foto
 * Textmodul
 
 ---
 ### Mitmachen
----
+
 * Textmodul
 
 ---
 ### Impressum & Datenschutz
----
+
 * textmodul
 
 ---
 ### Footer
----
+
 * Socialmedia Links
 * Datenschutz&Impressum Links
 
 ---
 ### _Später:_
----
+
 * Spenden
 * Presse
 * Termine
