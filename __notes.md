@@ -1,50 +1,65 @@
+---
 ### Home
+---
+* Titel
+* Subheadline
+* Subscribe Links
+* Socialmedia links
+* Kurzbeschreibung
+* Episoden Teaser
+    * Image
+    * Titel
+    * Category (=Buch)
+    * Description
+    * Gastname
+    * Date
+    * Episode No.
 
-## Titel
-## Subheadline
-## Subscribe Links
-## Socialmedia links
-## Kurzbeschreibung
-## Episoden Teaser
-# Image
-# Titel
-# Category (=Buch)
-# Description
-# Gastname
-# Date
-# Episode No.
+---
+## Episonden Seite
+---
+* Image
+* Player
+* Subscribe Links
+* Titel
+* Category (=Buch)
+* Gewürdigter Character
+* Gastname + Hausname + Gast-Social-Accout
+* Description (+Shownotes)
+* Date
+* Episode No.
+* Transscript
 
-### Episonden Seite
-
-## Image
-## Player
-## Subscribe Links
-## Titel
-## Category (=Buch)
-## Gewürdigter Character
-## Gastname + Hausname + Gast-Social-Accout
-## Description (+Shownotes)
-## Date
-## Episode No.
-## Transscript
-
+---
 ### Über den Podcast
-## Textmodul
+---
+* Textmodul
 
+---
 ### Über mich
-## Foto
-## Textmodul
+---
+* Foto
+* Textmodul
 
+---
 ### Mitmachen
-## Textmodul
+---
+* Textmodul
 
+---
 ### Impressum & Datenschutz
-## textmodul
+---
+* textmodul
 
+---
 ### Footer
-## Socialmedia links
+---
+* Socialmedia Links
+* Datenschutz&Impressum Links
 
-Später:
-### Spenden
-### Presse
-### Termine
+---
+### _Später:_
+---
+* Spenden
+* Presse
+* Termine
