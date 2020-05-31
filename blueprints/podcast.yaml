@@ -1,0 +1,164 @@
+title: Podcast Page Content
+extends@: default
+
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+
+          #
+          # Add your custom fields here.
+          # These fields will be available in the page's Content tab
+          # inside the Admin Panel.
+          #
+          fields:
+
+            contentTitle:
+              type: spacer
+              title: Podcast meta infos
+
+            basics:
+              type: columns
+              fields:
+                column0:
+                  type: column
+                  fields:
+                    header.podcastMeta.type:
+                      type: selectize
+                      selectize:
+                        options:
+                          - text: "Full"
+                            value: "f"
+                          - text: "Teaser"
+                            value: "t"
+                          - text: "Bonus"
+                            value: "b"
+                      size: large
+                      label: Type
+                      classes: fancy
+                      help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
+                      validate:
+                        type: commalist
+                column1:
+                  type: column
+                  fields:
+                    header.podcastMeta.season:
+                      type: text
+                      label: Season
+
+                column2:
+                  type: column
+                  fields:
+                    header.podcastMeta.episode:
+                      type: text
+                      label: Episode
+                column3:
+                  type: column
+                  fields:
+                    header.podcastMeta.date:
+                      type: datetime
+                      label: Publish date
+                      help: PLUGIN_ADMIN.DATE_HELP
+                column4:
+                  type: column
+                  fields:
+                    header.podcastMeta.book:
+                      type: selectize
+                      selectize:
+                        options:
+                          - text: "Harry Potter und der Stein der Weisen"
+                            value: "Harry Potter und der Stein der Weisen"
+                          - text: "Harry Potter und die Kammer des Schreckens"
+                            value: "Harry Potter und die Kammer des Schreckens"
+                          - text: "Harry Potter und der Gefangene von Askaban"
+                            value: "Harry Potter und der Gefangene von Askaban"
+                          - text: "Harry Potter und der Feuerkelch"
+                            value: "Harry Potter und der Feuerkelch"
+                          - text: "Harry Potter und der Orden des Phönix"
+                            value: "Harry Potter und der Orden des Phönix"
+                          - text: "Harry Potter und das Halbblutprinz"
+                            value: "Harry Potter und das Halbblutprinz"
+                          - text: "Harry Potter und die Heiligtümer des Todes"
+                            value: "Harry Potter und die Heiligtümer des Todes"
+                      size: large
+                      label: Book
+                      classes: fancy
+                      help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
+                      validate:
+                        type: commalist
+                column5:
+                  type: column
+                  fields:
+                    header.podcastMeta.capter:
+                      type: selectize                      
+                      size: large
+                      label: Capter
+                      classes: fancy
+                      help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
+                      validate:
+                        type: commalist
+                                          
+            guest:
+              type: columns
+              fields:
+                column1:
+                  type: column
+                  fields:
+                     header.podcastMeta.guest.name:  
+                      type: text
+                      label: Guest name
+                column2:
+                  type: column
+                  fields:
+                    header.podcastMeta.guest.house:
+                      type: selectize
+                      selectize:
+                        options:
+                          - text: "Gryffindor"
+                            value: "Gryffindor"
+                          - text: "Hufflepuff"
+                            value: "Hufflepuff"
+                          - text: "Ravenclaw"
+                            value: "Ravenclaw"
+                          - text: "Slytherin"
+                            value: "Slytherin"
+                      size: large
+                      label: House
+                      classes: fancy
+                      help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
+                      validate:
+                        type: commalist
+                column3:
+                  type: column
+                  fields:
+                    header.podcastMeta.guest.instagram:  
+                      type: text
+                      label: Guest instagram account
+
+            header.podcastMeta.character:
+              type: text
+              label: Honorable character 
+            
+            contentTitle2:
+              type: spacer
+              title: Podcast show notes
+
+            header.podcastMeta.shownotes:
+              type: editor
+              validate:
+                type: textarea
+
+            contentTitle3:
+              type: spacer
+              title: Podcast transcript
+
+            header.podcastMeta.transcript:
+              type: editor
+              validate:
+                type: textarea

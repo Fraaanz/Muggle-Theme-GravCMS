@@ -1,0 +1,113 @@
+title: Page Content
+extends@: default
+
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+
+          #
+          # Add your custom fields here.
+          # These fields will be available in the page's Content tab
+          # inside the Admin Panel.
+          #
+          fields:
+
+            contentTitle:
+              type: spacer
+              title: Stage Content
+              text: In the following fields you can enter the content of the page. The fields above will be ignored, except the title (!). So you can leave them empty.
+
+            header.stageTitle:
+              type: text
+              label: Stage title
+
+            header.stageSubtitle:
+              type: text
+              label: Stage title
+            
+            header.text:
+              type: editor
+              validate:
+                type: textarea
+              label: Introtext
+
+            header.coverImage:
+              type: file
+              label: Cover image
+              destination: 'self@'
+              multiple: false
+              accept:
+                - image/*
+        teaser:
+          type: tab
+          title: Teaser Config
+
+          fields:
+
+            content_title:
+              type: spacer
+              title: Content Definition
+
+            header.content.items:
+              type: textarea
+              yaml: true
+              label: Items
+              default:  "'@taxonomy.category': [fruit]"
+              validate:
+                type: yaml
+
+            header.content.limit:
+              type: text
+              label: Max Item Count
+              default: 5
+              validate:
+                required: true
+                type: int
+                min: 1
+
+            header.content.order.by:
+              type: select
+              label: Order By
+              default: date
+              options:
+                folder: Folder
+                title: Title
+                date: Date
+                default: Default
+
+            header.content.order.dir:
+              type: select
+              label: Order
+              default: desc
+              options:
+                asc: Ascending
+                desc: Descending
+
+            header.content.pagination:
+              type: toggle
+              label: Pagination
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.content.url_taxonomy_filters:
+              type: toggle
+              label: URL Taxonomy Filters
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool

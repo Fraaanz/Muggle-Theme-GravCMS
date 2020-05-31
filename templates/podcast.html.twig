@@ -1,0 +1,110 @@
+{% extends 'modules/base.html.twig' %}
+
+{% block content %}
+
+	{% include 'modules/header.html.twig' %}
+
+	{% if page.media.images is defined and page.media.images is not empty %}
+		{% set coverimage = page.media.images|first %}
+		<img src="{{ coverimage.url }}" alt="Cover image">
+	{% endif %}
+
+	{% if page.header.podcastMeta.type is defined and page.header.podcastMeta.type is not empty and page.header.podcastMeta.episode is defined and page.header.podcastMeta.episode is not empty %}
+		{% for entry in page.header.podcastMeta.type %}
+			<div>
+				{% if entry == 't' %}
+					Teaser
+				{% elseif entry == 'b' %}
+					Bonus
+				{% else %}
+					Episode
+				{% endif %}
+			</div>
+			<div>
+				{{ page.header.podcastMeta.episode }}
+			</div>
+		{% endfor %}
+	{% endif %}
+
+	{% if page.header.podcastMeta.season is defined and page.header.podcastMeta.season is not empty %}
+
+		<div>
+			Staffel
+		</div>
+		<div>
+			{{ page.header.podcastMeta.season }}
+		</div>
+
+	{% endif %}
+
+	<h1>
+		{{ page.title }}
+	</h1>
+
+	<div>
+		{% if page.header.podcastMeta.date is defined and page.header.podcastMeta.date is not empty %}
+			{{ page.header.podcastMeta.date|date("d.m.Y") }}
+		{% endif %}
+	</div>
+	<div>
+		{% if page.header.podcastMeta.book is defined and page.header.podcastMeta.book is not empty %}
+			{% for entry in page.header.podcastMeta.book %}
+				{{ entry }}
+			{% endfor %}
+		{% endif %}
+	</div>
+	<div>
+		{% if page.header.podcastMeta.capter is defined and page.header.podcastMeta.capter is not empty %}
+			{% for entry in page.header.podcastMeta.capter %}
+				{{ entry }}
+			{% endfor %}
+		{% endif %}
+	</div>
+	<p>
+		{% if page.content is defined and page.content is not empty %}
+			{{ page.content }}
+		{% endif %}
+	</p>
+	{% if page.header.podcastMeta.guest.name is defined and page.header.podcastMeta.guest.name is not empty %}
+		<p>mit
+			<span>{{ page.header.podcastMeta.guest.name }}</span>
+			{% if page.header.podcastMeta.guest.house is defined and page.header.podcastMeta.guest.house is not empty %}
+				•
+				<span>
+					{% for entry in page.header.podcastMeta.guest.house %}
+						{{ entry }}
+					{% endfor %}
+				</span>
+			{% endif %}
+			{% if page.header.podcastMeta.guest.instagram is defined and page.header.podcastMeta.guest.instagram is not empty %}
+				•
+				<span>{{ page.header.podcastMeta.guest.instagram }}</span>
+			{% endif %}
+		</p>
+	{% endif %}
+
+	{% if page.header.podcastMeta.type is defined and page.header.podcastMeta.type is not empty and page.header.podcastMeta.episode is defined and page.header.podcastMeta.episode is not empty %}
+		<div>
+			<script class="podigee-podcast-player" src="https://cdn.podigee.com/podcast-player/javascripts/podigee-podcast-player.js" data-configuration="https://meetingmuggles.podigee.io/{% for entry in page.header.podcastMeta.type %}{{ entry }}{% endfor %}{{ page.header.podcastMeta.episode }}-{% for entry in page.header.podcastMeta.type %}{% if entry == 't' %}teaser{% elseif entry == 'b' %}bonus{% else %}episode{% endif %}{% endfor %}/embed?context=external"></script>
+		</div>
+	{% endif %}
+
+	{% if page.header.podcastMeta.shownotes is defined and page.header.podcastMeta.shownotes is not empty %}
+		<h2>
+			Show notes
+		</h2>
+		<p>
+			{{ page.header.podcastMeta.shownotes|markdown }}
+		</p>
+	{% endif %}
+
+	{% if page.header.podcastMeta.transcript is defined and page.header.podcastMeta.transcript is not empty %}
+		<h2>
+			Transcript
+		</h2>
+		<p>
+			{{ page.header.podcastMeta.transcript|markdown }}
+		</p>
+	{% endif %}
+
+{% endblock %}

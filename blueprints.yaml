@@ -21,12 +21,42 @@ form:
   validation: loose
   fields:
     dropdown.enabled:
-        type: toggle
-        label: Dropdown in Menu
-        highlight: 1
-        default: 1
-        options:
-          1: PLUGIN_ADMIN.ENABLED
-          0: PLUGIN_ADMIN.DISABLED
-        validate:
-          type: bool
+      type: toggle
+      label: Dropdown in Menu
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    podcastSubscribeTitle:
+      type: spacer
+      title: Podcast subscribe links
+      text: Here you can enter your podcast subcribe urls.
+    podcastSubscribe.itunesUrl:
+      type: text
+      label: iTunes
+      placeholder: https://podcasts.apple.com/podcast/id493890455
+    podcastSubscribe.spotifyUrl:
+      type: text
+      label: Spotify
+      placeholder: https://open.spotify.com/show/2PUoQB330ft0sTzSNoCPrH?si=ZUYOtZSZQZyrDdo81l7TcA
+    
+    socialMediaAccountTitle:
+      type: spacer
+      title: Social Media Accounts
+      text: Here you can enter your social media account urls.
+    socialMediaAccount.instagramUrl:
+      type: text
+      label: Instagram Profile URL
+      placeholder: https://www.instagram.com/your-profile-name/
+    socialMediaAccount.facebookUrl:
+      type: text
+      label: Facebook Profile URL
+      placeholder: https://www.facebook.com/your-profile-name/
+    socialMediaAccount.linkedinUrl:
+      type: text
+      label: LinkedIn Profile URL
+      placeholder: https://www.linkedin.com/in/your-profile-name/
