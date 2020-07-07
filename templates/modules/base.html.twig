@@ -10,8 +10,8 @@
 		<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
         {% block stylesheets %}
-            {% do assets.addCss('theme://css/main.css') %}
-            {% do assets.addCss('theme://css/modules.css') %}
+            {% do assets.addCss('theme://templates/normalize.css') %}
+            {% do assets.addCss('theme://css/style.css') %}
         {% endblock %}
 
         {% block javascripts %}

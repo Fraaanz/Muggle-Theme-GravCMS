@@ -3,9 +3,9 @@ var sass = require('gulp-sass');
 var del = require('del');
 var cleanCSS = require('gulp-clean-css');
 
-var cssInputAll = 'scss/**/*.scss';
-var cssOutput = 'css-min';
-var cssOutputAll = 'css-min/**/*.css';
+var cssInputAll = 'templates/**/*.scss';
+var cssOutput = 'css';
+var cssOutputAll = 'css/**/*.css';
 
 
 gulp.task('styles', () => {

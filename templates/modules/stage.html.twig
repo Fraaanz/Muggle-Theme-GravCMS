@@ -1,0 +1,23 @@
+<section class="stage" {% if page.header.stageImage is defined and page.header.stageImage is not empty %} style="background-image: url('{% for bgImage in page.header.stageImage %}{{ page.media[bgImage.name].url }}{% endfor %}');" {% endif %}>
+  <div class="stage-title">
+    {% if page.header.stageTitle is defined and page.header.stageTitle is not empty %}
+      <h1 class="js-ani-scroll">
+        {{ page.header.stageTitle }}
+      </h1>
+    {% endif %}
+    {% if page.header.stageSubtitle is defined and page.header.stageSubtitle is not empty %}
+      <p class="js-ani-scroll">
+        {{ page.header.stageSubtitle }}
+      </p>
+    {% endif %}
+    {% if page.header.teaserOverviewLink is defined and page.header.teaserOverviewLink is not empty %}
+      <a class="button" href="{{ page.header.teaserOverviewLink }}">{{ page.header.teaserOverviewLinkText }}</a>
+    {% endif %}
+  </div>
+  <div class="stage-subscribe">
+    {% include 'modules/podcast-subscribe.html.twig' %}
+  </div>
+</section>
+<section class="stage-social">
+  {% include 'modules/social-media-accounts.html.twig' %}
+</section>

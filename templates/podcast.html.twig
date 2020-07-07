@@ -83,11 +83,9 @@
 		</p>
 	{% endif %}
 
-	{% if page.header.podcastMeta.type is defined and page.header.podcastMeta.type is not empty and page.header.podcastMeta.episode is defined and page.header.podcastMeta.episode is not empty %}
-		<div>
-			<script class="podigee-podcast-player" src="https://cdn.podigee.com/podcast-player/javascripts/podigee-podcast-player.js" data-configuration="https://meetingmuggles.podigee.io/{% for entry in page.header.podcastMeta.type %}{{ entry }}{% endfor %}{{ page.header.podcastMeta.episode }}-{% for entry in page.header.podcastMeta.type %}{% if entry == 't' %}teaser{% elseif entry == 'b' %}bonus{% else %}episode{% endif %}{% endfor %}/embed?context=external"></script>
-		</div>
-	{% endif %}
+	{% include 'modules/podegee-player.html.twig' with {
+        item: page,
+    } %}
 
 	{% if page.header.podcastMeta.shownotes is defined and page.header.podcastMeta.shownotes is not empty %}
 		<h2>

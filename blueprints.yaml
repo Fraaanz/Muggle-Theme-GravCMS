@@ -35,28 +35,66 @@ form:
       type: spacer
       title: Podcast subscribe links
       text: Here you can enter your podcast subcribe urls.
+    podcastSubscribe.itunesLabel:
+      type: text
+      label: iTunes button label
+      placeholder: Subscribe on iTunes
     podcastSubscribe.itunesUrl:
       type: text
-      label: iTunes
-      placeholder: https://podcasts.apple.com/podcast/id493890455
+      label: iTunes URL
+      placeholder: https://podcasts.apple.com/de/podcast/meeting-muggles/id1515760353
+    podcastSubscribe.spotifyLabel:
+      type: text
+      label: Spotify button label
+      placeholder: Subscribe on Spotify
     podcastSubscribe.spotifyUrl:
       type: text
-      label: Spotify
-      placeholder: https://open.spotify.com/show/2PUoQB330ft0sTzSNoCPrH?si=ZUYOtZSZQZyrDdo81l7TcA
-    
+      label: Spotify URL
+      placeholder: https://open.spotify.com/show/7JkqSt0G9ap8sqObmXfiw2?si=di6X68sPRnSD07DcQQ-WbA
+    podcastSubscribe.podigeeUrl:
+      type: text
+      label: Podigee URL
+      placeholder: https://meetingmuggles.podigee.io/
+    podcastSubscribe.custom:
+        classes: frontmatter
+        type: editor
+        label: Custom subscribe button (HTML snippet only)
+        placeholder: lalala
+        autofocus: true
+        codemirror:
+          mode: 'html'
+          indentUnit: 4
+          autofocus: true
+          indentWithTabs: false
+          lineNumbers: true
+          styleActiveLine: true
+          gutters: ['CodeMirror-lint-markers']
+          lint: true
     socialMediaAccountTitle:
       type: spacer
       title: Social Media Accounts
       text: Here you can enter your social media account urls.
+    socialMediaAccount.instagramLabel:
+      type: text
+      label: Instagram button label
+      placeholder: Follow me on Instagram
     socialMediaAccount.instagramUrl:
       type: text
-      label: Instagram Profile URL
+      label: Instagram profile URL
       placeholder: https://www.instagram.com/your-profile-name/
+    socialMediaAccount.facebookLabel:
+      type: text
+      label: Facebook button label
+      placeholder: Follow me on Facebook
     socialMediaAccount.facebookUrl:
       type: text
-      label: Facebook Profile URL
+      label: Facebook profile URL
       placeholder: https://www.facebook.com/your-profile-name/
+    socialMediaAccount.linekdinLabel:
+      type: text
+      label: LinkedIn button label
+      placeholder: Follow me on LinkedIn
     socialMediaAccount.linkedinUrl:
       type: text
-      label: LinkedIn Profile URL
+      label: LinkedIn profile URL
       placeholder: https://www.linkedin.com/in/your-profile-name/

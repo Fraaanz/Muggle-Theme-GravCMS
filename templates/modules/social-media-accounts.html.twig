@@ -1,0 +1,20 @@
+{% set instagramUrl = theme_var('socialMediaAccount.instagramUrl') %}
+{% set facebookUrl = theme_var('socialMediaAccount.facebookUrl') %}
+{% set linkedinUrl = theme_var('socialMediaAccount.linkedinUrl') %}
+{% set instagramLabel = theme_var('socialMediaAccount.instagramLabel') %}
+{% set facebookLabel = theme_var('socialMediaAccount.facebookLabel') %}
+{% set linkedinLabel = theme_var('socialMediaAccount.linkedinLabel') %}
+
+{% if (instagramUrl is defined and instagramUrl is not empty) or (facebookUrl is defined and facebookUrl is not empty) or (linkedinUrl is defined and linkedinUrl is not empty) %}
+	<div class="social-media-accounts">
+		{% if instagramUrl is defined and instagramUrl is not empty %}
+			<a class="social-media-accounts-button -instagram" href="{{ instagramUrl }}" target="_blank">{{ instagramLabel | default("Instagram") }}</a>
+		{% endif %}
+		{% if facebookUrl is defined and facebookUrl is not empty %}
+			<a class="social-media-accounts-button -facebook" href="{{ facebookUrl }}" target="_blank">{{ facebookLabel | default("Facebook") }}</a>
+		{% endif %}
+		{% if linkedinUrl is defined and linkedinUrl is not empty %}
+			<a class="social-media-accounts-button -linkedin" href="{{ linkedinUrl }}" target="_blank">{{ linkedinLabel | default("LinkedIn") }}</a>
+		{% endif %}
+	</div>
+{% endif %}

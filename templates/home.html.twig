@@ -4,47 +4,19 @@
 
 {% include 'modules/header.html.twig' %}
 
-<!-- Modul: image stage -->
-<section class="m-stage">
-    <div class="m-stage-title">
-        <h1 class="js-ani-scroll">
-            {{ page.header.stageTitle }}
-            
-        </h1>
-        <p class="js-ani-scroll">
-            {{ page.header.stageSubtitle }}
-       
-        {% include 'modules/socialMediaAccounts.html.twig' %}
-        <script class="podlove-subscribe-button" src="https://cdn.podigee.com/subscribe-button/javascripts/app.js" data-json-url="https://meetingmuggles.podigee.io/embed/subscribe_button"></script>
-        <a href="https://open.spotify.com/show/7JkqSt0G9ap8sqObmXfiw2?si=di6X68sPRnSD07DcQQ-WbA" target="_blank">Auf Spotify folgen</a>
-        <a href="https://podcasts.apple.com/de/podcast/meeting-muggles/id1515760353" target="_blank">Auf iTunes anhören.</a>
-    </div>
-    <picture>
-        <!--<source media="(min-width: 768px)" srcset="src/media/stage/stage-l.jpg, src/media/stage/stage-l-2x.jpg 2x">
-        <source media="(min-width: 320px)" srcset="src/media/stage/stage-s.jpg,  src/media/stage/stage-s-2x.jpg 2x">-->
-        <img src="src/media/meeting-muggles-podcast-header.jpg" srcset="src/media/meeting-muggles-podcast-header.jpg 2x" alt="Titelbild">
-   </picture>
+{% include 'modules/stage.html.twig' %}
+
+<section class="page-content">
+    {{ page.content }} 
 </section>
 
-<!-- Modul: text monolith -->
-<section class="m-text-monolith">
-    <div class="w-80">
-        {{ page.content }} 
-    </div>
+<section class="teaser-grid">
+    {% for teaser in taxonomy.findTaxonomy({'category':'Podcast'}).order('header.podcastMeta.date','desc')  %}
+        <div class="teaser-grid-item">
+            {% include 'modules/podcast-teaser.html.twig' %}
+        </div>
+    {% endfor %}
+    <a href="{{ page.header.teaserOverviewLink }}">{{ page.header.teaserOverviewLinkText }}</a>
 </section>
-
-<!-- Modul: image -->
-  <section class="m-media">
-      <picture class="w-80 o-left">
-        <source media="(min-width: 769px)" srcset="src/media/images/image-placeholder-l.jpg,  src/media/images/image-placeholder-l-2x.jpg 2x">
-        <source media="(min-width: 320px)" srcset="src/media/images/image-placeholder-s.jpg,  src/media/images/image-placeholder-s-2x.jpg 2x">
-        <img src="src/media/images/image-placeholder-l.jpg" srcset="src/media/images/image-placeholder-l-2x.jpg 2x">
-    </picture>
-  </section>
-
-{% for teaser in taxonomy.findTaxonomy({'category':'Podcast'})  %}
-    <div>{{ teaser.title }}</div>
-{% endfor %}
-
 
 {% endblock %}

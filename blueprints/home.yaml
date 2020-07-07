@@ -30,84 +30,41 @@ form:
 
             header.stageSubtitle:
               type: text
-              label: Stage title
-            
-            header.text:
-              type: editor
-              validate:
-                type: textarea
-              label: Introtext
+              label: Stage subtitle
 
-            header.coverImage:
+            header.stageImage:
               type: file
-              label: Cover image
+              label: Stage image
               destination: 'self@'
               multiple: false
               accept:
                 - image/*
-        teaser:
-          type: tab
-          title: Teaser Config
+            
 
-          fields:
-
-            content_title:
+            contentTitle2:
               type: spacer
-              title: Content Definition
+              title: Podcast Teaser Settings
 
-            header.content.items:
-              type: textarea
-              yaml: true
-              label: Items
-              default:  "'@taxonomy.category': [fruit]"
-              validate:
-                type: yaml
-
-            header.content.limit:
-              type: text
-              label: Max Item Count
-              default: 5
-              validate:
-                required: true
-                type: int
-                min: 1
-
-            header.content.order.by:
-              type: select
-              label: Order By
-              default: date
-              options:
-                folder: Folder
-                title: Title
-                date: Date
-                default: Default
-
-            header.content.order.dir:
-              type: select
-              label: Order
-              default: desc
-              options:
-                asc: Ascending
-                desc: Descending
-
-            header.content.pagination:
-              type: toggle
-              label: Pagination
-              highlight: 1
-              default: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
-
-            header.content.url_taxonomy_filters:
-              type: toggle
-              label: URL Taxonomy Filters
-              highlight: 1
-              default: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
+            basics:
+              type: columns
+              fields:
+                column0:
+                  type: column
+                  fields:
+                    header.teaserOverviewLink:
+                      type: pages
+                      size: medium
+                      classes: fancy
+                      label: Link
+                      show_all: false
+                      show_modular: false
+                      show_root: false
+                      help: PLUGIN_ADMIN.HOME_PAGE_HELP#
+                column1:
+                  type: column
+                  fields:
+                    header.teaserOverviewLinkText:
+                      type: text
+                      label: Link text
+                      placeholder: 'To display link, type link text here'
+        
