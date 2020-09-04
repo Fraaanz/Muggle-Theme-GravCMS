@@ -31,7 +31,7 @@ Require additional Node modules:
 
 (Stable with Node v8.17.0)
 
-## Planned updates
+## 📈 Planned updates
 
 - Animation concept
 - Privacy policy updates (user permission for external content)
