@@ -10,16 +10,18 @@ Simple podcast landing page theme.
 
 ## 🍱 Grav Plugins
 
- Admin Panel  v1.9.16
- DevTools  v1.4.1
- Email  v3.0.9
- Error  v1.7.0
- Form  v4.1.1
- Login  v3.3.5
- Markdown Notices  v1.0.4
- Problems  v2.0.3
+Required plugins:
 
- [All single PlugIns are part of the Grav Admin Plugin – available here: https://getgrav.org/downloads](https://getgrav.org/downloads)
+- Admin Panel  v1.9.16
+- DevTools  v1.4.1
+- Email  v3.0.9
+- Error  v1.7.0
+- Form  v4.1.1
+- Login  v3.3.5
+- Markdown Notices  v1.0.4
+- Problems  v2.0.3
+
+[All single plugins are part of the "Grav Admin Plugin"– available here: https://getgrav.org/downloads](https://getgrav.org/downloads)
 
 ## 🏗 Build process
 
