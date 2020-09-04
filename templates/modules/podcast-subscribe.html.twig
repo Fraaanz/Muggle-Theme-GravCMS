@@ -7,11 +7,6 @@
 
 {% if (itunesUrl is defined and itunesUrl is not empty) or (spotifyUrl is defined and spotifyUrl is not empty) or (podigeeUrl is defined and podigeeUrl is not empty) or (custom is defined and custom is not empty) %}
   <div class="podcast-subscribe">
-    {% if podigeeUrl is defined and podigeeUrl is not empty %}
-      <div class="podcast-subscribe-podigee">
-        <script class="podlove-subscribe-button" src="https://cdn.podigee.com/subscribe-button/javascripts/app.js" data-json-url="{{ podigeeUrl }}embed/subscribe_button"></script>
-      </div>
-    {% endif %}
     {% if custom is defined and custom is not empty %}
       {{ custom }}
     {% endif %}
@@ -20,6 +15,11 @@
     {% endif %}
     {% if spotifyUrl is defined and spotifyUrl is not empty %}
       <a class="podcast-subscribe-button -spotify" href="{{ spotifyUrl }}" target="_blank">{{ spotifyLabel | default("Spotify") }}</a>
+    {% endif %}
+    {% if podigeeUrl is defined and podigeeUrl is not empty %}
+      <div class="podcast-subscribe-podigee">
+        <script class="podlove-subscribe-button" src="https://cdn.podigee.com/subscribe-button/javascripts/app.js" data-json-url="{{ podigeeUrl }}embed/subscribe_button"></script>
+      </div>
     {% endif %}
   </div>
 {% endif %}

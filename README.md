@@ -1,9 +1,7 @@
-# 🧙‍♂️ Muggle Theme – 0.3
+# 🧙‍♂️ Muggle Theme – 0.3 BETA
 
 The **Muggle Theme** Theme is developed for [Grav CMS](http://github.com/getgrav/grav).
 (Stable with Grav v1.6.27)
-
-### ⚠️ Theme is still under construction 🖖
 
 ## 📖 Description
 
@@ -32,6 +30,13 @@ Require additional Node modules:
 - gulp-clean-css
 
 (Stable with Node v8.17.0)
+
+## Planned updates
+
+- Animation concept
+- Privacy policy updates (user permission for external content)
+- Individual theming options
+- Typography and layout improvements
 
 ## ⚖️ License
 
