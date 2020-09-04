@@ -2,21 +2,20 @@
 
 {% block content %}
 
-{% include 'modules/header.html.twig' %}
-
-{% include 'modules/stage.html.twig' %}
-
 <section class="page-content">
+    <h1 class="podcast-page-headline">
+      {{ page.title }}
+    </h1>
     {{ page.content }} 
+
 </section>
 
 <section class="teaser-grid">
-    {% for teaser in taxonomy.findTaxonomy({'category':'Podcast'}).order('header.podcastMeta.date','desc')  %}
+    {% for teaser in taxonomy.findTaxonomy({'category':'Podcast'}).order('header.podcastMeta.date','asc')  %}
         <div class="teaser-grid-item">
             {% include 'modules/podcast-teaser.html.twig' %}
         </div>
     {% endfor %}
-    <a href="{{ page.header.teaserOverviewLink }}">{{ page.header.teaserOverviewLinkText }}</a>
 </section>
 
 {% endblock %}

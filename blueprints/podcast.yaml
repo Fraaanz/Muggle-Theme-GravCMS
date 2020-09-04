@@ -33,8 +33,8 @@ form:
                       type: selectize
                       selectize:
                         options:
-                          - text: "Full"
-                            value: "f"
+                          - text: "Episode"
+                            value: "e"
                           - text: "Teaser"
                             value: "t"
                           - text: "Bonus"
@@ -140,10 +140,18 @@ form:
                     header.podcastMeta.guest.instagram:  
                       type: text
                       label: Guest instagram account
+                      placeholder: '@guest196'
+                column4:
+                  type: column
+                  fields:
+                    header.podcastMeta.guest.instagramUrl:
+                      type: text
+                      label: Guest instagram profile URL
+                      placeholder: https://www.instagram.com/guest-profile-name/
 
             header.podcastMeta.character:
               type: text
-              label: Honorable character 
+              label: Honorable character     
             
             contentTitle2:
               type: spacer

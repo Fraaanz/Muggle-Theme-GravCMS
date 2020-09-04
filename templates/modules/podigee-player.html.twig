@@ -1,0 +1,6 @@
+{% set podigeeUrl = theme_var('podcastSubscribe.podigeeUrl') %}
+{% if page.header.podcastMeta.type is defined and page.header.podcastMeta.type is not empty and page.header.podcastMeta.episode is defined and page.header.podcastMeta.episode is not empty and podigeeUrl is defined and podigeeUrl is not empty %}
+  <div class="podigee-player">
+    <script class="podigee-podcast-player" src="https://cdn.podigee.com/podcast-player/javascripts/podigee-podcast-player.js" data-configuration="{{ podigeeUrl }}{% for entry in page.header.podcastMeta.type %}{% if entry == 'e' %}{% else %}{{ entry }}{% endif %}{% endfor %}{{ page.header.podcastMeta.episode }}-{% for entry in page.header.podcastMeta.type %}{% if entry == 't' %}item{% elseif entry == 'b' %}bonus{% else %}neue-episode{% endif %}{% endfor %}/embed?context=external"></script>
+  </div>
+{% endif %}

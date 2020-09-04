@@ -1,0 +1,16 @@
+{% extends 'modules/base.html.twig' %}
+
+{% block content %}
+
+  <section class="page-content">
+    <a class="button" href="#" onclick="history.go(-1)">Go Back</a>
+    <h1 class="podcast-page-headline">
+      {{ page.title }}
+    </h1>
+  </section>
+
+  <section class="page-content">
+    {{ page.content }}
+  </section>
+
+{% endblock %}

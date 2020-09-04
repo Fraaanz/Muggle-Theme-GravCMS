@@ -4,8 +4,8 @@
 <head>
     
     <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
-        <!--<link rel="alternate" type="application/rss+xml" title="Mein Podcast" href="https://meinpodcast.podigee.io/feed/mp3"/>-->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <!--<link rel="alternate" type="application/rss+xml" title="Mein Podcast" href="https://meinpodcast.podigee.io/feed/mp3"/>-->
         
 		<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
@@ -17,7 +17,7 @@
         {% block javascripts %}
             {% do assets.addJs('jquery', 100) %}
             {% do assets.addJs('theme://js/animations.js', 99) %}
-            {% do assets.addJs('theme://js/header-footer.js', 98) %}
+            {% do assets.addJs('theme://js/header.js', {group:'bottom'}) %}
         {% endblock %}
 
         {% block assets deferred %}
@@ -28,22 +28,11 @@
 </head>
 <body class="{{ page.header.body_classes }}">
 
+{% include 'modules/header.html.twig' %}
+
 {% block content %}{% endblock %}
 
-<footer>
-    <a href="index.html" class="sitetitle">
-        <span>Meeting Muggles</span>
-    </a>
-    <nav>
-        <ul>
-            <li>
-                <a href="impressum.html">
-                    Impressum und Datenschutz
-                </a>
-            </li>
-        </ul>
-    </nav>
-</footer>
+{% include 'modules/footer.html.twig' %}
 
 {% block bottom %}
     {{ assets.js('bottom')|raw }}

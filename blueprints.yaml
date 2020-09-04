@@ -59,7 +59,6 @@ form:
         classes: frontmatter
         type: editor
         label: Custom subscribe button (HTML snippet only)
-        placeholder: lalala
         autofocus: true
         codemirror:
           mode: 'html'
@@ -98,3 +97,42 @@ form:
       type: text
       label: LinkedIn profile URL
       placeholder: https://www.linkedin.com/in/your-profile-name/
+    globalTextStrings:
+      type: spacer
+      title: Global text strings
+    globalTextStrings.podcastTeaserButtonText:
+      type: text
+      label: Podcast teaser button text    
+      default: Read more   
+    globalTextStrings.podcastSubscribeText:
+      type: text
+      label: Podcast subscribe text    
+      default: Subscribe to podcast
+    globalTextStrings.socialShareText:
+      type: text
+      label: Social share text    
+      default: Stay in touch   
+    globalTextStrings.podcastTeaserLabel:
+      type: text
+      label: Teaser label
+      default: Teaser 
+    globalTextStrings.podcastBonusLabel:
+      type: text
+      label: Bonus label
+      default: Bonus
+    globalTextStrings.podcastEpisodeLabel:
+      type: text
+      label: Episode label
+      default: Episode
+    globalTextStrings.podcastSeasonLabel:
+      type: text
+      label: Season label
+      default: Season    
+    globalTextStrings.podcastShowNotesLabel:
+      type: text
+      label: Show notes label
+      default: Show notes
+    globalTextStrings.podcastTranscriptLabel:
+      type: text
+      label: Transcript label
+      default: Transcript        

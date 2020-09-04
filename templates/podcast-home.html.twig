@@ -1,0 +1,20 @@
+{% extends 'modules/base.html.twig' %}
+
+{% block content %}
+
+{% include 'modules/stage.html.twig' %}
+
+<section class="page-content">
+    {{ page.content }} 
+</section>
+
+<section class="teaser-grid">
+    {% for teaser in taxonomy.findTaxonomy({'category':'Podcast'}).order('header.podcastMeta.date','asc')  %}
+        <div class="teaser-grid-item">
+            {% include 'modules/podcast-teaser.html.twig' %}
+        </div>
+    {% endfor %}
+    <a class="button -secondary" href="{{ page.header.teaserOverviewLink }}">{{ page.header.teaserOverviewLinkText }}</a>
+</section>
+
+{% endblock %}

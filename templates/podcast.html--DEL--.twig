@@ -2,8 +2,6 @@
 
 {% block content %}
 
-	{% include 'modules/header.html.twig' %}
-
 	{% if page.media.images is defined and page.media.images is not empty %}
 		{% set coverimage = page.media.images|first %}
 		<img src="{{ coverimage.url }}" alt="Cover image">
@@ -83,9 +81,11 @@
 		</p>
 	{% endif %}
 
-	{% include 'modules/podegee-player.html.twig' with {
-        item: page,
+  <div id="podigee-player">
+  {% include 'modules/podigee-player.html.twig' with {
+      item: teaser,
     } %}
+  </div>
 
 	{% if page.header.podcastMeta.shownotes is defined and page.header.podcastMeta.shownotes is not empty %}
 		<h2>

@@ -1,10 +1,5 @@
 <div class="podcast-teaser">
 
-  {% if teaser.media.images is defined and teaser.media.images is not empty %}
-    {% set coverimage = teaser.media.images|first %}
-    <img class="podcast-teaser-image" src="{{ coverimage.url }}" alt="Cover image">
-  {% endif %}
-
   <div class="podcast-teaser-meta">
     {% if teaser.header.podcastMeta.type is defined and teaser.header.podcastMeta.type is not empty and teaser.header.podcastMeta.episode is defined and teaser.header.podcastMeta.episode is not empty %}
 
@@ -32,51 +27,77 @@
     {% endif %}
   </div>
 
+  {% if teaser.header.podcastMeta.date is defined and teaser.header.podcastMeta.date is not empty %}
+    <div class="podcast-teaser-date">
+      {{ teaser.header.podcastMeta.date|date("d.m.Y") }}
+    </div>
+  {% endif %}
+
   <h2 class="podcast-teaser-headline">
-    {{ teaser.title }}
+    <a href="{{ teaser.url }}">{{ teaser.title }}</a>
   </h2>
-  <div>
-    {% if teaser.header.podcastMeta.book is defined and teaser.header.podcastMeta.book is not empty %}
-      {% for entry in teaser.header.podcastMeta.book %}
-        {{ entry }}
-      {% endfor %}
-    {% endif %}
-  </div>
-  <div>
-    {% if teaser.header.podcastMeta.capter is defined and teaser.header.podcastMeta.capter is not empty %}
-      {% for entry in teaser.header.podcastMeta.capter %}
-        {{ entry }}
-      {% endfor %}
-    {% endif %}
-  </div>
-  <p>
-    {% if teaser.content is defined and teaser.content is not empty %}
-      {{ teaser.content }}
-    {% endif %}
-  </p>
-  {% if teaser.header.podcastMeta.guest.name is defined and teaser.header.podcastMeta.guest.name is not empty %}
-    <p>mit
-      <span>{{ teaser.header.podcastMeta.guest.name }}</span>
-      {% if teaser.header.podcastMeta.guest.house is defined and teaser.header.podcastMeta.guest.house is not empty %}
-        •
-        <span>
-          {% for entry in teaser.header.podcastMeta.guest.house %}
+
+  {% if teaser.media.images is defined and teaser.media.images is not empty %}
+    {% set coverimage = teaser.media.images|first %}
+    <img class="podcast-teaser-image" src="{{ coverimage.url }}" alt="Cover image">
+  {% endif %}
+
+  {% if (teaser.header.podcastMeta.book is defined and teaser.header.podcastMeta.book is not empty) or if (teaser.header.podcastMeta.capter is defined and teaser.header.podcastMeta.capter is not empty) or if (teaser.header.podcastMeta.guest.name is defined and teaser.header.podcastMeta.guest.name is not empty) %}
+    <div class="podcast-teaser-meta -blocktwo">
+
+      {% if teaser.header.podcastMeta.book is defined and teaser.header.podcastMeta.book is not empty %}
+        <div>
+          {% for entry in teaser.header.podcastMeta.book %}
             {{ entry }}
           {% endfor %}
-        </span>
+        </div>
       {% endif %}
-      {% if teaser.header.podcastMeta.guest.instagram is defined and teaser.header.podcastMeta.guest.instagram is not empty %}
-        •
-        <span>{{ teaser.header.podcastMeta.guest.instagram }}</span>
+
+      {% if teaser.header.podcastMeta.capter is defined and teaser.header.podcastMeta.capter is not empty %}
+        <div>
+          {% for entry in teaser.header.podcastMeta.capter %}
+            {{ entry }}
+          {% endfor %}
+        </div>
       {% endif %}
-    </p>
+
+    </div>
   {% endif %}
-  {% include 'modules/podegee-player.html.twig' with {
-        item: teaser,
-    } %}
-  <div>
-    {% if teaser.header.podcastMeta.date is defined and teaser.header.podcastMeta.date is not empty %}
-      {{ teaser.header.podcastMeta.date|date("d.m.Y") }}
-    {% endif %}
-  </div>
+
+  {% if teaser.header.podcastMeta.guest.name is defined and teaser.header.podcastMeta.guest.name is not empty %}
+    <div class="podcast-teaser-meta -blockthree">
+      <div>mit
+        <span>{{ teaser.header.podcastMeta.guest.name }}</span>
+
+        {% if teaser.header.podcastMeta.guest.house is defined and teaser.header.podcastMeta.guest.house is not empty %}
+          <span>
+            {% for entry in teaser.header.podcastMeta.guest.house %}
+              ({{ entry }})
+            {% endfor %}
+          </span>
+        {% endif %}
+
+        {% if teaser.header.podcastMeta.guest.instagram is defined and teaser.header.podcastMeta.guest.instagram is not empty %}
+          {% if teaser.header.podcastMeta.guest.instagramUrl is defined and teaser.header.podcastMeta.guest.instagramUrl is not empty %}
+            <a href="" target="_blank">
+            {% endif %}
+            {{ teaser.header.podcastMeta.guest.instagram }}
+            {% if teaser.header.podcastMeta.guest.instagramUrl is defined and teaser.header.podcastMeta.guest.instagramUrl is not empty %}
+            </a>
+          {% endif %}
+
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if teaser.content is defined and teaser.content is not empty %}
+    <div class="podcast-teaser-content">
+      {{ teaser.content }}
+    </div>
+  {% endif %}
+
+  <a class="button" href="{{ teaser.url }}">{{ theme_var('globalTextStrings.podcastTeaserButtonText') }}</a>
+  <a class="button -secondary" href="{{ teaser.url }}#podigee-player" alt="Play podcast">►</a>
+
 </div>

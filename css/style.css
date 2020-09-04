@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap");
 @font-face {
-  font-family: 'Voga';
+  font-family: "Voga";
   src: url("../fonts/Voga-Medium.woff") format("woff"); }
 
 /* Colors */
@@ -8,10 +8,12 @@
 /* Grid and layout */
 /* Basic stlyes */
 body {
-  font-family: 'Manrope', Helvetica, sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+  font-family: "Manrope", Helvetica, sans-serif;
   font-size: 1rem;
-  line-height: 1.5;
-  color: #000000; }
+  font-weight: 300;
+  line-height: 1.5; }
   @media only screen and (min-width: 768px) {
     body {
       font-size: 1.25rem; } }
@@ -20,23 +22,40 @@ img {
   width: 100%; }
 
 a {
-  color: #DD0757; }
+  color: #dd0757; }
 
 a.button {
   display: inline-block;
   padding: 0.65rem 1.25rem;
   border-radius: 4rem;
-  background-color: #DD0757;
+  background-color: #dd0757;
   color: #ffffff;
+  border: 1px solid #dd0757;
   font-size: 0.75rem;
+  font-weight: 400;
   text-decoration: none; }
   @media only screen and (min-width: 768px) {
     a.button {
       font-size: 1rem;
-      padding: 0.70rem 1.75rem; } }
+      padding: 0.7rem 1.75rem; } }
+  a.button.-secondary {
+    background-color: transparent;
+    color: #dd0757; }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol {
-  font-weight: 300; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  font-family: "Manrope", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0 0 1rem; }
 
 h1 {
   font-size: 1.5rem; }
@@ -47,7 +66,7 @@ h1 {
 /* Page content (stadard section) */
 .page-content {
   width: calc(100% - 4rem);
-  margin: 1rem;
+  margin: 1rem 1rem 2rem;
   padding: 1rem; }
   @media only screen and (min-width: 768px) {
     .page-content {
@@ -58,11 +77,22 @@ h1 {
       max-width: 50rem;
       padding: 1rem 10rem 1rem 1rem; } }
 
+/* Navigation */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  nav ul li {
+    color: #000000; }
+    nav ul li a {
+      color: #000000;
+      text-decoration: none; }
+
 /* Header */
 header {
   width: calc(100% - 4rem);
   max-width: 60rem;
-  margin: 1rem;
+  margin: 1rem 1rem 2rem;
   padding: 1rem;
   padding-top: 0;
   padding-bottom: 0;
@@ -87,8 +117,37 @@ header {
   line-height: 1.5;
   margin: 0.25rem 0 0 0; }
 
-.header-wrapper-closed {
-  display: none; }
+.header-wrapper {
+  background-color: #f7d01b;
+  box-shadow: 0 0 4rem rgba(0, 0, 0, 0.33);
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% - 4rem);
+  padding: 2rem; }
+  .header-wrapper-closed {
+    display: none; }
+  .header-wrapper-bg {
+    backdrop-filter: blur(1rem);
+    background-color: rgba(0, 0, 0, 0.33);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: 0.25s;
+    z-index: 9; }
+  .header-wrapper-bg-closed {
+    background-color: #ffffff;
+    backdrop-filter: blur(0rem);
+    z-index: -1; }
+  .header-wrapper ul {
+    margin-bottom: 1rem; }
+    .header-wrapper ul li {
+      margin-top: 1rem; }
+    .header-wrapper ul li.has-children > ul {
+      display: none; }
 
 .header-menu-closed {
   display: none; }
@@ -101,17 +160,24 @@ header {
   height: 1.8rem;
   padding: 0.81875rem; }
 
+.header #header-closebutton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.71875rem; }
+
 /* Stage */
 .stage {
   width: calc(100% - 4rem);
   max-width: 60rem;
-  margin: 1rem;
+  margin: 1rem 1rem 2rem;
   padding: 1rem;
   background-color: #f7d01b;
   background-size: 8rem;
   background-position: bottom right;
   background-repeat: no-repeat;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 1rem; }
   @media only screen and (min-width: 768px) {
     .stage {
       margin-right: auto;
@@ -133,9 +199,10 @@ header {
   .stage-social {
     width: calc(100% - 4rem);
     max-width: 60rem;
-    margin: 1rem;
+    margin: 1rem 1rem 2rem;
     padding: 1rem;
     margin-top: 0;
+    margin-bottom: 0;
     padding-top: 0; }
     @media only screen and (min-width: 768px) {
       .stage-social {
@@ -156,7 +223,7 @@ header {
     height: 41px;
     margin-bottom: 6px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.70rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.03rem;
@@ -170,7 +237,7 @@ header {
   .podcast-subscribe-button:last-child {
     margin-right: 0; }
   .podcast-subscribe-button:before {
-    content: '';
+    content: "";
     height: 1.5rem;
     width: 1.5rem;
     margin-right: 0.5rem;
@@ -186,7 +253,7 @@ header {
     align-items: center;
     height: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.70rem;
+    font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.03rem;
     color: #000000;
@@ -201,7 +268,7 @@ header {
   .social-media-accounts-button:last-child {
     margin-bottom: 0; }
   .social-media-accounts-button:after {
-    content: '';
+    content: "";
     height: 1rem;
     width: 1rem;
     margin-left: 0.33rem;
@@ -211,48 +278,236 @@ header {
 .teaser-grid {
   width: calc(100% - 2rem);
   max-width: 62rem;
-  margin: 1rem;
+  margin: 1rem 1rem 2rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch; }
+  align-items: stretch;
+  justify-content: center; }
   @media only screen and (min-width: 768px) {
     .teaser-grid {
       margin-right: auto;
       margin-left: auto; } }
   .teaser-grid-item {
     width: 100%;
-    background-color: #F4F4F4; }
+    background-color: #f4f4f4;
+    margin-bottom: 2rem; }
+  .teaser-grid .button {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1.25rem; }
+  .teaser-grid > .button {
+    margin: auto; }
   @media only screen and (min-width: 768px) {
     .teaser-grid-item {
-      width: calc(50% - 1rem);
-      margin-right: 2rem; }
+      width: calc(50% - 0.5rem);
+      margin-right: 1rem;
+      margin-bottom: 1rem; }
     .teaser-grid-item:nth-child(2n) {
       margin-right: 0; } }
   @media only screen and (min-width: 1024px) {
     .teaser-grid-item {
-      width: 33.33%; } }
+      width: calc(33.33% - 1.333rem);
+      margin-right: 2rem; }
+    .teaser-grid-item:nth-child(2n) {
+      margin-right: 2rem; }
+    .teaser-grid-item:nth-child(3n) {
+      margin-right: 0; } }
 
 /* Podcast teaser */
 .podcast-teaser {
   position: relative;
   padding: 1rem;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   display: flex;
-  flex-wrap: wrap; }
-  .podcast-teaser-image {
-    width: 35%;
-    position: absolute;
-    top: 1rem;
-    right: 1rem; }
+  flex-wrap: wrap;
+  justify-content: left; }
+  .podcast-teaser > * {
+    margin-bottom: 1rem; }
   .podcast-teaser-meta {
-    width: calc(65% - 1rem); }
+    width: 50%;
+    text-align: left;
+    font-size: 0.85rem; }
     .podcast-teaser-meta > * {
       display: inline-block;
       margin-right: 0.5rem; }
+    .podcast-teaser-meta > *:first-child {
+      font-weight: 700; }
     .podcast-teaser-meta > *:last-child {
       margin-right: 0; }
+    .podcast-teaser-meta.-blocktwo {
+      width: 66.66%; }
+      .podcast-teaser-meta.-blocktwo > * {
+        margin-bottom: 0.5rem;
+        width: 100%; }
+      .podcast-teaser-meta.-blocktwo > *:last-child,
+      .podcast-teaser-meta.-blocktwo > *:first-child {
+        margin-bottom: 0; }
+    .podcast-teaser-meta.-blockthree {
+      width: 100%; }
+      .podcast-teaser-meta.-blockthree > * {
+        font-weight: 400; }
+  .podcast-teaser-date {
+    width: 50%;
+    text-align: right;
+    font-size: 0.85rem; }
   .podcast-teaser-headline {
-    font-size: 2rem;
-    font-family: 'Voga', 'Manrope', sans-serif;
+    font-size: 2.5rem;
+    font-family: "Voga", "Manrope", sans-serif;
     line-height: 1.3;
-    width: calc(65% - 1.75rem); }
+    width: 100%; }
+    .podcast-teaser-headline a {
+      text-decoration: none;
+      color: #000000; }
+      .podcast-teaser-headline a:hover {
+        color: #000000; }
+  .podcast-teaser-image {
+    width: calc(33.33% - 1rem);
+    height: calc(33.33% - 1rem);
+    margin-right: 1rem; }
+  .podcast-teaser-content {
+    height: 7rem;
+    width: 100%;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    font-size: 1rem; }
+    .podcast-teaser-content:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 8rem;
+      background-image: linear-gradient(rgba(255, 255, 255, 0), #f4f4f4); }
+  .podcast-teaser a.button.-secondary {
+    margin-left: 1rem; }
+
+/* Podcast page */
+.podcast-page {
+  width: calc(100% - 4rem);
+  max-width: 60rem;
+  margin: 1rem 1rem 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left; }
+  @media only screen and (min-width: 768px) {
+    .podcast-page {
+      margin-right: auto;
+      margin-left: auto; } }
+  .podcast-page > * {
+    margin-bottom: 1rem; }
+  .podcast-page-meta {
+    width: 50%;
+    text-align: left;
+    font-size: 0.85rem; }
+    .podcast-page-meta > * {
+      display: inline-block;
+      margin-right: 0.5rem; }
+    .podcast-page-meta > *:first-child {
+      font-weight: 700; }
+    .podcast-page-meta > *:last-child {
+      margin-right: 0; }
+    .podcast-page-meta.-blocktwo {
+      width: 66.66%; }
+      .podcast-page-meta.-blocktwo > * {
+        margin-bottom: 0.5rem;
+        width: 100%; }
+      .podcast-page-meta.-blocktwo > *:last-child,
+      .podcast-page-meta.-blocktwo > *:first-child {
+        margin-bottom: 0; }
+    .podcast-page-meta.-blockthree {
+      width: 100%; }
+      .podcast-page-meta.-blockthree > * {
+        font-weight: 400; }
+  .podcast-page-date {
+    width: 50%;
+    text-align: right;
+    font-size: 0.85rem; }
+  .podcast-page-headline {
+    font-size: 2.5rem;
+    font-family: "Voga", "Manrope", sans-serif;
+    line-height: 1.3;
+    width: 100%; }
+    .podcast-page-headline a {
+      text-decoration: none;
+      color: #000000; }
+      .podcast-page-headline a:hover {
+        color: #000000; }
+  .podcast-page-image {
+    width: calc(33.33% - 1rem);
+    height: calc(33.33% - 1rem);
+    margin-right: 1rem; }
+  .podcast-page-content {
+    width: calc(100% - 4rem);
+    margin: 1rem 1rem 2rem;
+    padding: 1rem; }
+    @media only screen and (min-width: 768px) {
+      .podcast-page-content {
+        margin-right: auto;
+        margin-left: auto; } }
+    @media only screen and (min-width: 1024px) {
+      .podcast-page-content {
+        max-width: 50rem;
+        padding: 1rem 10rem 1rem 1rem; } }
+  .podcast-page div.podigee-player {
+    margin: 1rem 0 -2rem; }
+
+/* Podigee podcast player */
+div.podigee-player {
+  width: 100%; }
+
+/* Footer */
+.footer {
+  width: calc(100% - 2rem);
+  max-width: 62rem;
+  margin: 1rem 1rem 2rem;
+  margin-top: 4rem; }
+  @media only screen and (min-width: 768px) {
+    .footer {
+      margin-right: auto;
+      margin-left: auto; } }
+  .footer-subscribe {
+    padding: 1rem;
+    background-color: #f7d01b;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+    .footer-subscribe h2 {
+      width: 100%;
+      margin: 1rem 0 0.5rem;
+      font-size: 0.75rem;
+      text-align: center; }
+  .footer .podcast-subscribe {
+    justify-content: center; }
+    .footer .podcast-subscribe-podigee {
+      margin-right: 0;
+      left: 0; }
+  .footer-social {
+    padding: 2rem 1rem;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+    .footer-social h2 {
+      width: 100%;
+      margin: 0 0 0.5rem;
+      font-size: 0.75rem;
+      text-align: center; }
+    .footer-social .social-media-accounts {
+      align-items: center; }
+  .footer-navigation {
+    padding: 1rem;
+    background-color: #f7d01b;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+    .footer-navigation ul li a {
+      font-size: 0.75rem; }

@@ -1,12 +1,25 @@
-# 🧙‍♂️ Muggle Theme – 0.1
+# 🧙‍♂️ Muggle Theme – 0.3
 
 The **Muggle Theme** Theme is for [Grav CMS](http://github.com/getgrav/grav).
 
-(Stable with Grav v1.6.24)
+(Stable with Grav v1.6.27)
 
 ## 📖 Description
 
 Simple podcast landing page theme.
+
+## 🍱 Grav Plugins
+
+ Admin Panel  v1.9.16
+ DevTools  v1.4.1
+ Email  v3.0.9
+ Error  v1.7.0
+ Form  v4.1.1
+ Login  v3.3.5
+ Markdown Notices  v1.0.4
+ Problems  v2.0.3
+
+ [All single PlugIns are part of the Grav Admin Plugin – available here: https://getgrav.org/downloads](https://getgrav.org/downloads)
 
 ## 🏗 Build process
 
@@ -19,24 +32,23 @@ Require additional Node modules:
 
 ## ⚖️ License
 
-The MIT License (MIT)
+### [Attribution-NonCommercial 3.0 Germany (CC BY-NC 3.0 DE)](https://creativecommons.org/licenses/by-nc/3.0/de/deed.en)
 
-Copyright (c) 2020 Franz Mattuschka
+#### You are free to:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+**Share** — copy and redistribute the material in any medium or format
+**Adapt** — remix, transform, and build upon the material
+The licensor cannot revoke these freedoms as long as you follow the license terms.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+#### Under the following terms:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+**Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+**NonCommercial** — You may not use the material for commercial purposes.
+No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+#### Notices:
+
+You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
+No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
+
+**[https://creativecommons.org/licenses/by-nc/3.0/de/deed.en](https://creativecommons.org/licenses/by-nc/3.0/de/deed.en)**
