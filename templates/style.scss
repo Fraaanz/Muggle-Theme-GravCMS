@@ -1,8 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap");
-
 @font-face {
   font-family: "Voga";
   src: url("../fonts/Voga-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Bold.woff") format("woff"), url("../fonts/Manrope-Bold.woff2") format("woff2");
+  font-weight: 700; 
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Medium.woff") format("woff"), url("../fonts/Manrope-Medium.woff2") format("woff2");
+  font-weight: 500; 
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Light.woff") format("woff"), url("../fonts/Manrope-Light.woff2") format("woff2");
+  font-weight: 300; 
 }
 
 /* Colors */
@@ -12,6 +28,10 @@ $color-white: #ffffff;
 $color-background: #eceff1;
 $color-brand: #f7d01b;
 $color-highlight: #dd0757;
+
+/* Basic border radius for all elements */
+
+$page-border-radius: 0.125rem;
 
 /* Beakpoints (mobile first) */
 
@@ -75,6 +95,10 @@ $mq-05: 1400px;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
+}
+
+* {
+  border-radius: $page-border-radius;
 }
 
 body {
@@ -193,6 +217,7 @@ nav {
       a {
         color: $color-black;
         text-decoration: none;
+        font-size: 1.25rem;
       }
     }
   }
@@ -301,6 +326,7 @@ header {
   @include layout-wide();
 
   background-color: $color-brand;
+  box-shadow: 0 0 -$page-border-radius 0 $color-brand;
   background-size: 8rem;
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -551,7 +577,7 @@ header {
   &-headline {
     font-size: 2.5rem;
     font-family: "Voga", "Manrope", sans-serif;
-    line-height: 1.3;
+    line-height: 1.1;
     width: 100%;
 
     a {
@@ -659,7 +685,7 @@ header {
   &-headline {
     font-size: 2.5rem;
     font-family: "Voga", "Manrope", sans-serif;
-    line-height: 1.3;
+    line-height: 1.1;
     width: 100%;
 
     a {

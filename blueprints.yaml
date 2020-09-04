@@ -3,7 +3,7 @@ slug: muggle-theme
 type: plugin
 version: 0.3
 description: Simple podcast landing page theme.
-icon: rebel
+icon: microphone
 author:
   name: Franz Mattuschka
   email: hello@franzmattuschka.com
