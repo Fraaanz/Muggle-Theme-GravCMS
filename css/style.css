@@ -42,6 +42,18 @@ a.button {
     background-color: transparent;
     color: #dd0757; }
 
+a.button-back {
+  display: inline-block;
+  position: relative;
+  height: 0.75rem;
+  width: 4rem;
+  background-image: url("../images/arrow-back.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .15s; }
+  a.button-back:hover {
+    transform: scale(0.9) translateX(-0.5rem); }
+
 h1,
 h2,
 h3,
@@ -63,7 +75,30 @@ h1 {
     h1 {
       font-size: 3rem; } }
 
-/* Page content (stadard section) */
+h2 {
+  font-size: 1.25rem; }
+  @media only screen and (min-width: 768px) {
+    h2 {
+      font-size: 2rem; } }
+
+.page-header {
+  width: calc(100% - 4rem);
+  margin: 1rem 1rem 2rem;
+  padding: 1rem;
+  margin-bottom: 0; }
+  @media only screen and (min-width: 768px) {
+    .page-header {
+      margin-right: auto;
+      margin-left: auto; } }
+  @media only screen and (min-width: 1024px) {
+    .page-header {
+      max-width: 51rem;
+      padding: 1rem 10rem 1rem 1rem; } }
+  .page-header .button-back {
+    top: 0.5rem;
+    margin-bottom: 1rem; }
+
+/* Page content (standard section) */
 .page-content {
   width: calc(100% - 4rem);
   margin: 1rem 1rem 2rem;
@@ -74,7 +109,7 @@ h1 {
       margin-left: auto; } }
   @media only screen and (min-width: 1024px) {
     .page-content {
-      max-width: 50rem;
+      max-width: 51rem;
       padding: 1rem 10rem 1rem 1rem; } }
 
 /* Navigation */
@@ -289,7 +324,7 @@ header {
       margin-left: auto; } }
   .teaser-grid-item {
     width: 100%;
-    background-color: #f4f4f4;
+    background-color: #eceff1;
     margin-bottom: 2rem; }
   .teaser-grid .button {
     font-size: 0.75rem;
@@ -317,7 +352,7 @@ header {
 .podcast-teaser {
   position: relative;
   padding: 1rem;
-  background-color: #f4f4f4;
+  background-color: #eceff1;
   display: flex;
   flex-wrap: wrap;
   justify-content: left; }
@@ -379,7 +414,7 @@ header {
       left: 0;
       width: 100%;
       height: 8rem;
-      background-image: linear-gradient(rgba(255, 255, 255, 0), #f4f4f4); }
+      background-image: linear-gradient(rgba(255, 255, 255, 0), #eceff1); }
   .podcast-teaser a.button.-secondary {
     margin-left: 1rem; }
 
@@ -449,7 +484,7 @@ header {
         margin-left: auto; } }
     @media only screen and (min-width: 1024px) {
       .podcast-page-content {
-        max-width: 50rem;
+        max-width: 51rem;
         padding: 1rem 10rem 1rem 1rem; } }
   .podcast-page div.podigee-player {
     margin: 1rem 0 -2rem; }
@@ -503,7 +538,7 @@ div.podigee-player {
       align-items: center; }
   .footer-navigation {
     padding: 1rem;
-    background-color: #f7d01b;
+    background-color: #eceff1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

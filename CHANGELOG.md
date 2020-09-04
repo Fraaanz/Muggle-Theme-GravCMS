@@ -1,5 +1,7 @@
-# v0.1.0
-##  05/05/2020
+# v0.3
+##  09/04/2020
 
 1. [](#new)
-    * ChangeLog started...
+    * Beta Release with 4 page templates
+      - podcast-home, podcast-default, podcast-overview, podcast-detail
+      
