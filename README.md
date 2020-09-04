@@ -3,7 +3,7 @@
 The **Muggle Theme** Theme is for [Grav CMS](http://github.com/getgrav/grav).
 (Stable with Grav v1.6.27)
 
-__Theme is still under construction 😉__
+### ⚠️ Theme is still under construction 🖖
 
 ## 📖 Description
 
