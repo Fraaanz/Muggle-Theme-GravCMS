@@ -1,9 +1,9 @@
 # 🧙‍♂️ Muggle Theme – 0.3 BETA
-## **Simple podcast landing page theme.**
+## 📲 Simple podcast landing page theme
 
 *Stable with Grav v1.6.27*
 
-| 📖 Description |  Preview |
+| 📖 Description |  🖥 Preview |
 |:----|:---|
 | The **Muggle Theme** Theme is developed for [Grav CMS](http://github.com/getgrav/grav). It includes easily accessible podigee podcast features, such as subscription buttons and a podcast player. | ![Screenshot](https://github.com/Fraaanz/Muggle-Theme-GravCMS/raw/master/screenshot.jpg) | 
 
