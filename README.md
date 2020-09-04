@@ -1,6 +1,6 @@
 # 🧙‍♂️ Muggle Theme – 0.3
 
-The **Muggle Theme** Theme is for [Grav CMS](http://github.com/getgrav/grav).
+The **Muggle Theme** Theme is developed for [Grav CMS](http://github.com/getgrav/grav).
 (Stable with Grav v1.6.27)
 
 ### ⚠️ Theme is still under construction 🖖
