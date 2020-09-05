@@ -17,4 +17,5 @@
 1. [](#new)
     * Bug fixes 
     * SVG play button 
+    * Header fade out
       

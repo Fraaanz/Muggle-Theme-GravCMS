@@ -264,6 +264,7 @@ header {
   position: sticky;
   top: 1rem;
   z-index: 10;
+  transition: 0.75s;
 }
 
 .header {
@@ -336,6 +337,10 @@ header {
     width: 1.8rem;
     height: 1.8rem;
     padding: 0.81875rem;
+  }
+
+  &-sticky {
+    box-shadow:  0 0.05rem 0.3rem #00000026, 0 0 6rem 2rem $color-background, 0 -1rem 4rem 1rem $color-background;
   }
 
   #header-closebutton {

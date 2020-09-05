@@ -17,6 +17,7 @@
         {% block javascripts %}
             {% do assets.addJs('jquery', 100) %}
             {% do assets.addJs('theme://js/header.js', {group:'bottom'}) %}
+            {% do assets.addJs('theme://js/animations.js', {group:'bottom'}) %}
         {% endblock %}
 
         {% block assets deferred %}
