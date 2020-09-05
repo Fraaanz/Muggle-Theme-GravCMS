@@ -33,12 +33,12 @@ Require additional Node modules:
 
 ## 📈 Planned updates
 
-– Images for default pages
+- Images for default pages
 - Animation concept
 - Privacy policy updates (user permission for external content)
 - Individual theming options
 - Typography and layout improvements
-– Image Alt-Tag improvements 
+- Image Alt-Tag improvements 
 
 ## ⚖️ License
 
