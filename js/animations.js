@@ -18,7 +18,7 @@ function ready(fn) {
 window.ready(function() {
     
     var updateStyles = function() {
-        elementAnimation(document.querySelector(".stage"), 400);
+        elementAnimation(document.querySelector(".scrolldetector"), 0);
     }
 
     var elementAnimation = function(scrollElement, scrollVariation) {
