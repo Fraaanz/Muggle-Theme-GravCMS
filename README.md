@@ -5,7 +5,7 @@
 
 | 📖 Description |  🖥 Preview |
 |:----|:---|
-| The **Muggle Theme** Theme is developed for [Grav CMS](http://github.com/getgrav/grav). It includes easily accessible podigee podcast features, such as subscription buttons and a podcast player. **Here you can see this Grav theme in action 👉 [https://meetingmuggles.de](https://meetingmuggles.de)**| ![Screenshot](https://github.com/Fraaanz/Muggle-Theme-GravCMS/raw/master/screenshot.jpg) | 
+| The **Muggle Theme** is developed for [Grav CMS](http://github.com/getgrav/grav). It includes easily accessible podigee podcast features, such as subscription buttons and a podcast player. **Here you can see this Grav theme in action 👉 [https://meetingmuggles.de](https://meetingmuggles.de)**| ![Screenshot](https://github.com/Fraaanz/Muggle-Theme-GravCMS/raw/master/screenshot.jpg) | 
 
 ## 🍱 Grav Plugins
 
@@ -38,7 +38,7 @@ Require additional Node modules:
 - Privacy policy updates (user permission for external content)
 - Individual theming options
 - Typography and layout improvements
-- Image Alt-Tag improvements 
+- Image alt tag improvements 
 
 ## ⚖️ License
 
