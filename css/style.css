@@ -40,7 +40,8 @@ img {
   width: 100%; }
 
 a {
-  color: #dd0757; }
+  color: #dd0757;
+  word-break: break-word; }
 
 a.button {
   display: inline-block;
