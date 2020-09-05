@@ -38,6 +38,7 @@ Require additional Node modules:
 - Privacy policy updates (user permission for external content)
 - Individual theming options
 - Typography and layout improvements
+– Image Alt-Tag improvements 
 
 ## ⚖️ License
 
