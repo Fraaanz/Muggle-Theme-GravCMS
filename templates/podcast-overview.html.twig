@@ -10,7 +10,7 @@
   </section>
 
   <section class="teaser-grid">
-    {% for teaser in taxonomy.findTaxonomy({'category':'Podcast'}).order('header.podcastMeta.date','asc')  %}
+    {% for teaser in taxonomy.findTaxonomy({'category':'Podcast'}).order('dir','desc')  %}
       <div class="teaser-grid-item">
         {% include 'modules/podcast-teaser.html.twig' %}
       </div>

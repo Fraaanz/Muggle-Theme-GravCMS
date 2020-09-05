@@ -10,6 +10,10 @@
   </section>
 
   <section class="page-content">
+    {% if page.media.images is defined and page.media.images is not empty %}
+      {% set image = page.media.images|first %}
+      <img class="floating-img" src="{{ image.url }}">
+    {% endif %}
     {{ page.content }}
   </section>
 
