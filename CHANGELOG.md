@@ -10,4 +10,11 @@
 
 1. [](#new)
     * Bug fixes 
+
+# v0.3.2
+##  09/05/2020
+
+1. [](#new)
+    * Bug fixes 
+    * SVG play button 
       

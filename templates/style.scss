@@ -138,6 +138,14 @@ a.button {
   &.-secondary {
     background-color: transparent;
     color: $color-highlight;
+    
+    svg {
+      fill: $color-highlight;
+    }
+  }
+
+  svg {
+    display: block;
   }
 }
 

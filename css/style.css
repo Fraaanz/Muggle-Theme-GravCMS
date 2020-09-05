@@ -60,6 +60,10 @@ a.button {
   a.button.-secondary {
     background-color: transparent;
     color: #dd0757; }
+    a.button.-secondary svg {
+      fill: #dd0757; }
+  a.button svg {
+    display: block; }
 
 a.button-back {
   display: inline-block;
