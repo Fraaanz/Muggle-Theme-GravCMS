@@ -44,7 +44,6 @@ Require additional Node modules:
 
 ## 📈 Planned updates
 
-- Images for default pages
 - Animation concept
 - Privacy policy updates (user permission for external content)
 - Individual theming options
