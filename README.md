@@ -12,10 +12,10 @@
 Easy set up, if you are using Podigee as your podcast host. Just enter your Podigee URL (👉theme settings), add a new Podcast (👉podcast-detail template) and the connection is established automatically. You also can add individual subscribe buttons. 
 
 **4 page templates**
-podcast-home
-podcast-default
-podcast-overview
-podcast-detail
+- podcast-home
+- podcast-default
+- podcast-overview
+- podcast-detail
 
 
 ## 🍱 Grav Plugins
