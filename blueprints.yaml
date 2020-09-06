@@ -135,4 +135,21 @@ form:
     globalTextStrings.podcastTranscriptLabel:
       type: text
       label: Transcript label
-      default: Transcript        
+      default: Transcript   
+    globalTextStrings.with:
+      type: text
+      label: Connective word "with"
+      default: with
+    globalFooter.linkText:
+      type: text
+      label: Data protection notice (Privacy Policy) link text
+      default: Data protection notice (Privacy Policy)   
+    globalFooter.link:
+      type: pages
+      size: medium
+      classes: fancy
+      label: Link
+      show_all: false
+      show_modular: false
+      show_root: false
+      help: PLUGIN_ADMIN.HOME_PAGE_HELP#

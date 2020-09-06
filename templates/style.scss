@@ -29,6 +29,8 @@ $color-background: #eceff1;
 $color-brand: #f7d01b;
 $color-highlight: #dd0757;
 
+@import 'individual-styling';
+
 /* Basic border radius for all elements */
 
 $page-border-radius: 0.125rem;

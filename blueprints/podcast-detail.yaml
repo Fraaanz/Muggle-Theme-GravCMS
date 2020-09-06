@@ -95,10 +95,10 @@ form:
                 column5:
                   type: column
                   fields:
-                    header.podcastMeta.capter:
+                    header.podcastMeta.chapter:
                       type: selectize                      
                       size: large
-                      label: Capter
+                      label: Chapter
                       classes: fancy
                       help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
                       validate:

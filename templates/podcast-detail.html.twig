@@ -46,7 +46,7 @@
       <img class="podcast-page-image" src="{{ coverimage.url }}" alt="Cover image">
     {% endif %}
 
-    {% if (page.header.podcastMeta.book is defined and page.header.podcastMeta.book is not empty) or if (page.header.podcastMeta.capter is defined and page.header.podcastMeta.capter is not empty) or if (page.header.podcastMeta.guest.name is defined and page.header.podcastMeta.guest.name is not empty) %}
+    {% if (page.header.podcastMeta.book is defined and page.header.podcastMeta.book is not empty) or if (page.header.podcastMeta.chapter is defined and page.header.podcastMeta.chapter is not empty) or if (page.header.podcastMeta.guest.name is defined and page.header.podcastMeta.guest.name is not empty) %}
       <div class="podcast-page-meta -blocktwo">
 
         {% if page.header.podcastMeta.book is defined and page.header.podcastMeta.book is not empty %}
@@ -57,9 +57,9 @@
           </div>
         {% endif %}
 
-        {% if page.header.podcastMeta.capter is defined and page.header.podcastMeta.capter is not empty %}
+        {% if page.header.podcastMeta.chapter is defined and page.header.podcastMeta.chapter is not empty %}
           <div>
-            {% for entry in page.header.podcastMeta.capter %}
+            {% for entry in page.header.podcastMeta.chapter %}
               {{ entry }}
             {% endfor %}
           </div>
@@ -70,7 +70,7 @@
 
     {% if page.header.podcastMeta.guest.name is defined and page.header.podcastMeta.guest.name is not empty %}
       <div class="podcast-page-meta -blockthree">
-        <div>mit
+        <div>{{ theme_var('globalTextStrings.with') }}
           <span>{{ page.header.podcastMeta.guest.name }}</span>
 
           {% if page.header.podcastMeta.guest.house is defined and page.header.podcastMeta.guest.house is not empty %}

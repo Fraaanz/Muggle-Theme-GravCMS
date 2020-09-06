@@ -40,16 +40,16 @@ img {
   width: 100%; }
 
 a {
-  color: #dd0757;
+  color: #c44208;
   word-break: break-word; }
 
 a.button {
   display: inline-block;
   padding: 0.65rem 1.25rem;
   border-radius: 4rem;
-  background-color: #dd0757;
+  background-color: #c44208;
   color: #ffffff;
-  border: 1px solid #dd0757;
+  border: 1px solid #c44208;
   font-size: 0.75rem;
   font-weight: 400;
   text-decoration: none; }
@@ -59,9 +59,9 @@ a.button {
       padding: 0.7rem 1.75rem; } }
   a.button.-secondary {
     background-color: transparent;
-    color: #dd0757; }
+    color: #c44208; }
     a.button.-secondary svg {
-      fill: #dd0757; }
+      fill: #c44208; }
   a.button svg {
     display: block; }
 
@@ -169,7 +169,7 @@ header {
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 0;
-  background-color: #f7d01b;
+  background-color: #a5cad3;
   height: 3.4375rem;
   display: flex;
   justify-content: space-between;
@@ -191,7 +191,7 @@ header {
   margin: 0.25rem 0 0 0; }
 
 .header-wrapper {
-  background-color: #f7d01b;
+  background-color: #a5cad3;
   box-shadow: 0 0 4rem rgba(0, 0, 0, 0.33);
   display: flex;
   position: absolute;
@@ -234,7 +234,7 @@ header {
   padding: 0.81875rem; }
 
 .header-sticky {
-  box-shadow: 0 0.05rem 0.3rem #00000026, 0 0 6rem 2rem #eceff1, 0 -1rem 4rem 1rem #eceff1; }
+  box-shadow: 0 0.05rem 0.3rem #00000026, 0 0 6rem 2rem #ededed, 0 -1rem 4rem 1rem #ededed; }
 
 .header #header-closebutton {
   position: absolute;
@@ -248,8 +248,8 @@ header {
   max-width: 60rem;
   margin: 1rem 1rem 2rem;
   padding: 1rem;
-  background-color: #f7d01b;
-  box-shadow: 0 -0.125rem 0 #f7d01b;
+  background-color: #a5cad3;
+  box-shadow: 0 -0.125rem 0 #a5cad3;
   background-size: 8rem;
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -366,7 +366,7 @@ header {
       margin-left: auto; } }
   .teaser-grid-item {
     width: 100%;
-    background-color: #eceff1;
+    background-color: #ededed;
     margin-bottom: 2rem; }
   .teaser-grid .button {
     font-size: 0.75rem;
@@ -395,7 +395,7 @@ header {
 .podcast-teaser {
   position: relative;
   padding: 1rem;
-  background-color: #eceff1;
+  background-color: #ededed;
   display: flex;
   flex-wrap: wrap;
   justify-content: left; }
@@ -457,7 +457,7 @@ header {
       left: 0;
       width: 100%;
       height: 8rem;
-      background-image: linear-gradient(rgba(255, 255, 255, 0), #eceff1); }
+      background-image: linear-gradient(rgba(255, 255, 255, 0), #ededed); }
   .podcast-teaser a.button.-secondary {
     margin-left: 1rem; }
 
@@ -548,7 +548,7 @@ div.podigee-player {
       margin-left: auto; } }
   .footer-subscribe {
     padding: 1rem;
-    background-color: #f7d01b;
+    background-color: #a5cad3;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -581,7 +581,7 @@ div.podigee-player {
       align-items: center; }
   .footer-navigation {
     padding: 1rem;
-    background-color: #eceff1;
+    background-color: #ededed;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

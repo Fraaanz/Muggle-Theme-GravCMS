@@ -3,18 +3,19 @@ var sass = require('gulp-sass');
 var del = require('del');
 var cleanCSS = require('gulp-clean-css');
 
-var cssInputAll = 'templates/**/*.scss';
-var cssOutput = 'css';
-var cssOutputAll = 'css/**/*.css';
+var cssInput = 'templates/**/style.scss';
+var cssWatchAll = 'templates/**/*.scss';
+var cssOutputDest = 'css';
+var cssOutput = 'css/**/style.css';
 
 
 gulp.task('styles', () => {
-    return gulp.src(cssInputAll)
-    .pipe(sass().on('error', sass.logError)).pipe(gulp.dest(cssOutput));
+    return gulp.src(cssInput)
+    .pipe(sass().on('error', sass.logError)).pipe(gulp.dest(cssOutputDest));
 });
 
 gulp.task('clean', () => {
-    return del([cssOutputAll,]);
+    return del([cssOutput,]);
 });
 
 gulp.task('minify-css', () => {
@@ -24,5 +25,5 @@ gulp.task('minify-css', () => {
 });
 
 gulp.task('default', function(){
-  gulp.watch(cssInputAll, gulp.series(['clean', 'styles', 'minify-css']));
+  gulp.watch(cssWatchAll, gulp.series(['clean', 'styles', 'minify-css']));
 });
