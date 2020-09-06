@@ -1,6 +1,9 @@
+/* Colors */
+/* Fonts */
 @font-face {
   font-family: "Voga";
-  src: url("../fonts/Voga-Medium.woff") format("woff"); }
+  src: url("../fonts/Voga-Medium.woff") format("woff");
+  font-weight: 400; }
 
 @font-face {
   font-family: "Manrope";
@@ -9,15 +12,14 @@
 
 @font-face {
   font-family: "Manrope";
-  src: url("../fonts/Manrope-Medium.woff") format("woff"), url("../fonts/Manrope-Medium.woff2") format("woff2");
-  font-weight: 500; }
+  src: url("../fonts/Manrope-SemiBold.woff") format("woff"), url("../fonts/Manrope-SemiBold.woff2") format("woff2");
+  font-weight: 600; }
 
 @font-face {
   font-family: "Manrope";
-  src: url("../fonts/Manrope-Light.woff") format("woff"), url("../fonts/Manrope-Light.woff2") format("woff2");
-  font-weight: 300; }
+  src: url("../fonts/Manrope-Regular.woff") format("woff"), url("../fonts/Manrope-Regular.woff2") format("woff2");
+  font-weight: 400; }
 
-/* Colors */
 /* Basic border radius for all elements */
 /* Beakpoints (mobile first) */
 /* Grid and layout */
@@ -30,7 +32,7 @@ body {
   background-color: #ffffff;
   font-family: "Manrope", Helvetica, sans-serif;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5; }
   @media only screen and (min-width: 768px) {
     body {
@@ -40,16 +42,16 @@ img {
   width: 100%; }
 
 a {
-  color: #c44208;
+  color: #dd0757;
   word-break: break-word; }
 
 a.button {
   display: inline-block;
   padding: 0.65rem 1.25rem;
   border-radius: 4rem;
-  background-color: #c44208;
+  background-color: #dd0757;
   color: #ffffff;
-  border: 1px solid #c44208;
+  border: 1px solid #dd0757;
   font-size: 0.75rem;
   font-weight: 400;
   text-decoration: none; }
@@ -59,9 +61,9 @@ a.button {
       padding: 0.7rem 1.75rem; } }
   a.button.-secondary {
     background-color: transparent;
-    color: #c44208; }
+    color: #dd0757; }
     a.button.-secondary svg {
-      fill: #c44208; }
+      fill: #dd0757; }
   a.button svg {
     display: block; }
 
@@ -88,7 +90,7 @@ ul,
 ol {
   font-family: "Manrope", Helvetica, sans-serif;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   margin: 0 0 1rem; }
 
@@ -101,10 +103,35 @@ h1 {
 
 h2 {
   font-size: 1.25rem;
-  line-height: 1.4; }
+  line-height: 1.4;
+  font-weight: 600; }
   @media only screen and (min-width: 768px) {
     h2 {
       font-size: 1.75rem; } }
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 600; }
+  @media only screen and (min-width: 768px) {
+    h3 {
+      font-size: 1.5rem; } }
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600; }
+  @media only screen and (min-width: 768px) {
+    h3 {
+      font-size: 1.3rem; } }
+
+h4, h5, h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600; }
+  @media only screen and (min-width: 768px) {
+    h4, h5, h6 {
+      font-size: 1.25rem; } }
 
 ul, ol {
   padding-left: 1.5rem; }
@@ -169,7 +196,7 @@ header {
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 0;
-  background-color: #a5cad3;
+  background-color: #f7d01b;
   height: 3.4375rem;
   display: flex;
   justify-content: space-between;
@@ -191,7 +218,7 @@ header {
   margin: 0.25rem 0 0 0; }
 
 .header-wrapper {
-  background-color: #a5cad3;
+  background-color: #f7d01b;
   box-shadow: 0 0 4rem rgba(0, 0, 0, 0.33);
   display: flex;
   position: absolute;
@@ -234,7 +261,7 @@ header {
   padding: 0.81875rem; }
 
 .header-sticky {
-  box-shadow: 0 0.05rem 0.3rem #00000026, 0 0 6rem 2rem #ededed, 0 -1rem 4rem 1rem #ededed; }
+  box-shadow: 0 0.05rem 0.3rem #00000026, 0 0 6rem 2rem #eceff1, 0 -1rem 4rem 1rem #eceff1; }
 
 .header #header-closebutton {
   position: absolute;
@@ -248,8 +275,8 @@ header {
   max-width: 60rem;
   margin: 1rem 1rem 2rem;
   padding: 1rem;
-  background-color: #a5cad3;
-  box-shadow: 0 -0.125rem 0 #a5cad3;
+  background-color: #f7d01b;
+  box-shadow: 0 -0.125rem 0 #f7d01b;
   background-size: 8rem;
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -366,7 +393,7 @@ header {
       margin-left: auto; } }
   .teaser-grid-item {
     width: 100%;
-    background-color: #ededed;
+    background-color: #eceff1;
     margin-bottom: 2rem; }
   .teaser-grid .button {
     font-size: 0.75rem;
@@ -395,7 +422,7 @@ header {
 .podcast-teaser {
   position: relative;
   padding: 1rem;
-  background-color: #ededed;
+  background-color: #eceff1;
   display: flex;
   flex-wrap: wrap;
   justify-content: left; }
@@ -423,7 +450,7 @@ header {
     .podcast-teaser-meta.-blockthree {
       width: 100%; }
       .podcast-teaser-meta.-blockthree > * {
-        font-weight: 400; }
+        font-weight: 700; }
   .podcast-teaser-date {
     width: 50%;
     text-align: right;
@@ -431,6 +458,7 @@ header {
   .podcast-teaser-headline {
     font-size: 2.5rem;
     font-family: "Voga", "Manrope", sans-serif;
+    font-weight: 400;
     line-height: 1.1;
     width: 100%; }
     .podcast-teaser-headline a {
@@ -457,7 +485,7 @@ header {
       left: 0;
       width: 100%;
       height: 8rem;
-      background-image: linear-gradient(rgba(255, 255, 255, 0), #ededed); }
+      background-image: linear-gradient(rgba(255, 255, 255, 0), #eceff1); }
   .podcast-teaser a.button.-secondary {
     margin-left: 1rem; }
 
@@ -506,6 +534,7 @@ header {
   .podcast-page-headline {
     font-size: 2.5rem;
     font-family: "Voga", "Manrope", sans-serif;
+    font-weight: 400;
     line-height: 1.1;
     width: 100%; }
     .podcast-page-headline a {
@@ -548,7 +577,7 @@ div.podigee-player {
       margin-left: auto; } }
   .footer-subscribe {
     padding: 1rem;
-    background-color: #a5cad3;
+    background-color: #f7d01b;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -558,6 +587,7 @@ div.podigee-player {
       width: 100%;
       margin: 1rem 0 0.5rem;
       font-size: 0.75rem;
+      font-weight: 400;
       text-align: center; }
   .footer .podcast-subscribe {
     justify-content: center; }
@@ -576,12 +606,13 @@ div.podigee-player {
       width: 100%;
       margin: 0 0 0.5rem;
       font-size: 0.75rem;
+      font-weight: 400;
       text-align: center; }
     .footer-social .social-media-accounts {
       align-items: center; }
   .footer-navigation {
     padding: 1rem;
-    background-color: #ededed;
+    background-color: #eceff1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

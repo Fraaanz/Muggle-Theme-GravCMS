@@ -1,7 +1,7 @@
 name: Muggle Theme
 slug: muggle-theme
 type: plugin
-version: 0.3.2
+version: 1.0
 description: Simple podcast landing page theme.
 icon: microphone
 author:
@@ -55,6 +55,14 @@ form:
       type: text
       label: Podigee URL
       placeholder: https://meetingmuggles.podigee.io/
+    podcastSubscribe.podigeeButton:
+      type: checkboxes
+      label: Podigee embedded button 
+      help: PLUGIN_ADMIN.PROCESS_HELP
+      default: [visible: false]
+      options:
+          visible: Visible
+      use: keys
     podcastSubscribe.custom:
         classes: frontmatter
         type: editor

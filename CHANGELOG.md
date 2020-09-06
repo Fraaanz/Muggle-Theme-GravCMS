@@ -19,3 +19,13 @@
     * SVG play button 
     * Header fade out
       
+# v1.0
+##  09/06/2020
+
+1. [](#new)
+    * Bug fixes 
+    * Font & typo update
+    * Useablity improvements
+    
+    
+      

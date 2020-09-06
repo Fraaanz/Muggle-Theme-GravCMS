@@ -1,4 +1,4 @@
-# 🧙‍♂️ Muggle Theme – 0.3.2 BETA
+# 🧙‍♂️ Muggle Theme – 1.0
 ## 📲 Simple podcast landing page theme
 
 *Stable with [Grav](http://github.com/getgrav/grav) v1.6.27*
@@ -6,6 +6,17 @@
 | 📖 Description |  🖥 Preview |
 |:----|:---|
 | The **Muggle Theme** is developed for [Grav CMS](http://github.com/getgrav/grav). It includes easily accessible podigee podcast features, such as subscription buttons and a podcast player. **Here you can see this Grav theme in action 👉 [https://meetingmuggles.de](https://meetingmuggles.de)**| ![Screenshot](https://github.com/Fraaanz/Muggle-Theme-GravCMS/raw/master/screenshot.jpg) | 
+
+## 🍭Features
+
+Easy set up, if you are using Podigee as your podcast host. Just enter your Podigee URL (👉theme settings), add a new Podcast (👉podcast-detail template) and the connection is established automatically. You also can add individual subscribe buttons. 
+
+**4 page templates**
+podcast-home
+podcast-default
+podcast-overview
+podcast-detail
+
 
 ## 🍱 Grav Plugins
 

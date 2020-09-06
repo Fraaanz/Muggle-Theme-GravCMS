@@ -3,6 +3,7 @@
 {% set itunesLabel = theme_var('podcastSubscribe.itunesLabel') %}
 {% set spotifyLabel = theme_var('podcastSubscribe.spotifyLabel') %}
 {% set podigeeUrl = theme_var('podcastSubscribe.podigeeUrl') %}
+{% set podigeeButton = theme_var('podcastSubscribe.podigeeButton.visible') %}
 {% set custom = theme_var('podcastSubscribe.custom') %}
 
 {% if (itunesUrl is defined and itunesUrl is not empty) or (spotifyUrl is defined and spotifyUrl is not empty) or (podigeeUrl is defined and podigeeUrl is not empty) or (custom is defined and custom is not empty) %}
@@ -16,7 +17,7 @@
     {% if spotifyUrl is defined and spotifyUrl is not empty %}
       <a class="podcast-subscribe-button -spotify" href="{{ spotifyUrl }}" target="_blank">{{ spotifyLabel | default("Spotify") }}</a>
     {% endif %}
-    {% if podigeeUrl is defined and podigeeUrl is not empty %}
+    {% if (podigeeUrl is defined and podigeeUrl is not empty) and (podigeeButton == 1) %}
       <div class="podcast-subscribe-podigee">
         <script class="podlove-subscribe-button" src="https://cdn.podigee.com/subscribe-button/javascripts/app.js" data-json-url="{{ podigeeUrl }}embed/subscribe_button"></script>
       </div>

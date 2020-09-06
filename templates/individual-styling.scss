@@ -1,5 +1,33 @@
+/* Colors */
+
 $color-black: #000000;
 $color-white: #ffffff;
-$color-background: #ededed;
-$color-brand: #a5cad3;
-$color-highlight: #c44208;
+$color-background: #eceff1;
+$color-brand: #f7d01b;
+$color-highlight: #dd0757;
+
+/* Fonts */
+
+@font-face {
+  font-family: "Voga";
+  src: url("../fonts/Voga-Medium.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Bold.woff") format("woff"), url("../fonts/Manrope-Bold.woff2") format("woff2");
+  font-weight: 700; 
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-SemiBold.woff") format("woff"), url("../fonts/Manrope-SemiBold.woff2") format("woff2");
+  font-weight: 600; 
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Regular.woff") format("woff"), url("../fonts/Manrope-Regular.woff2") format("woff2");
+  font-weight: 400; 
+}
