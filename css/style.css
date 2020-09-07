@@ -281,7 +281,7 @@ header {
   margin: 1rem 1rem 2rem;
   padding: 1rem;
   background-color: #f7d01b;
-  box-shadow: 0 -0.125rem 0 #f7d01b;
+  box-shadow: 0 -0.125rem 0 #f7d01b, 0 0 1.5rem #e3e3e3;
   background-size: 8rem;
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -401,7 +401,7 @@ header {
       margin-left: auto; } }
   .teaser-grid-item {
     width: 100%;
-    background-color: #f1eeec;
+    background-color: #e3e3e3;
     margin-bottom: 2rem; }
   .teaser-grid .button {
     font-size: 0.75rem;
@@ -430,7 +430,8 @@ header {
 .podcast-teaser {
   position: relative;
   padding: 1rem;
-  background-color: #f1eeec;
+  background-color: #ffffff;
+  box-shadow: 0 0 1.5rem #e3e3e3;
   display: flex;
   flex-wrap: wrap;
   justify-content: left; }
@@ -458,7 +459,7 @@ header {
     .podcast-teaser-meta.-blockthree {
       width: 100%; }
       .podcast-teaser-meta.-blockthree > * {
-        font-weight: 700; }
+        font-weight: 400; }
   .podcast-teaser-date {
     width: 50%;
     text-align: right;
@@ -479,9 +480,9 @@ header {
     height: calc(33.33% - 1rem);
     margin-right: 1rem; }
   .podcast-teaser-content {
-    height: 7rem;
+    height: 5.5rem;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: -1rem;
     overflow: hidden;
     position: relative;
     font-size: 1rem; }
@@ -493,7 +494,7 @@ header {
       left: 0;
       width: 100%;
       height: 8rem;
-      background-image: linear-gradient(rgba(255, 255, 255, 0), #f1eeec); }
+      background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff); }
   .podcast-teaser a.button.-secondary {
     margin-left: 1rem; }
 
@@ -586,6 +587,7 @@ div.podigee-player {
   .footer-subscribe {
     padding: 1rem;
     background-color: #f7d01b;
+    box-shadow: 0 0 1.5rem #e3e3e3;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -620,7 +622,8 @@ div.podigee-player {
       align-items: center; }
   .footer-navigation {
     padding: 1rem;
-    background-color: #f1eeec;
+    background-color: #ffffff;
+    box-shadow: 0 0 1.5rem #e3e3e3;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

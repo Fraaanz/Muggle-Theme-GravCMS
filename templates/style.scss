@@ -366,7 +366,7 @@ header {
   @include layout-wide();
 
   background-color: $color-brand;
-  box-shadow: 0 0 -$page-border-radius 0 $color-brand;
+  box-shadow: 0 0 -$page-border-radius 0 $color-brand, 0 0 1.5rem $color-background;
   background-size: 8rem;
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -563,7 +563,8 @@ header {
 .podcast-teaser {
   position: relative;
   padding: 1rem;
-  background-color: $color-background;
+  background-color: $color-white;
+  box-shadow: 0 0 1.5rem $color-background;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
@@ -608,7 +609,7 @@ header {
       width: 100%;
 
       > * {
-        font-weight: 700;
+        font-weight: 400;
       }
     }
   }
@@ -643,9 +644,9 @@ header {
   }
 
   &-content {
-    height: 7rem;
+    height: 5.5rem;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: -1rem;
     overflow: hidden;
     position: relative;
     font-size: 1rem;
@@ -658,7 +659,7 @@ header {
       left: 0;
       width: 100%;
       height: 8rem;
-      background-image: linear-gradient(rgba(255, 255, 255, 0), $color-background);
+      background-image: linear-gradient(rgba(255, 255, 255, 0), $color-white);
     }
   }
 
@@ -777,6 +778,7 @@ div.podigee-player {
   &-subscribe {
     padding: 1rem;
     background-color: $color-brand;
+    box-shadow: 0 0 1.5rem $color-background;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -825,7 +827,8 @@ div.podigee-player {
 
   &-navigation {
     padding: 1rem;
-    background-color: $color-background;
+    background-color: $color-white;
+    box-shadow: 0 0 1.5rem $color-background;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
