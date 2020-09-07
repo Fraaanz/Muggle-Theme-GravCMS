@@ -18,6 +18,7 @@
     <meta name="twitter:title" content="{{ theme_var('socialMediaSharing.title') }}">
     <meta name="twitter:description" content="{{ theme_var('socialMediaSharing.description') }}">
     <meta name="twitter:image" content="{{ base_url_absolute }}/{{ theme_var('socialMediaSharing.image')|first.path }}">
+    <meta name="twitter:image:alt" content="{{ theme_var('socialMediaSharing.description') }}">  
     <meta name="twitter:card" content="summary_large_image">
 
 		<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
