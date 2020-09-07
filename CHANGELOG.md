@@ -27,5 +27,13 @@
     * Font & typo update
     * Useablity improvements
     
+# v1.0.1
+##  09/07/2020
+
+1. [](#new)
+    * Header animation improvements
+    * Stage mobile text size improvements
+    * Button hover states
+    
     
       

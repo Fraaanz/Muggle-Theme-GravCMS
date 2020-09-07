@@ -54,11 +54,15 @@ a.button {
   border: 1px solid #dd0757;
   font-size: 0.75rem;
   font-weight: 400;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 0.25s;
+  box-shadow: 0 0 0 #dd0757; }
   @media only screen and (min-width: 768px) {
     a.button {
       font-size: 1rem;
       padding: 0.7rem 1.75rem; } }
+  a.button:hover {
+    box-shadow: 0 0 0.5rem #dd0757; }
   a.button.-secondary {
     background-color: transparent;
     color: #dd0757; }
@@ -95,42 +99,42 @@ ol {
   margin: 0 0 1rem; }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   line-height: 1.3; }
   @media only screen and (min-width: 768px) {
     h1 {
       font-size: 3rem; } }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.4;
   font-weight: 600; }
   @media only screen and (min-width: 768px) {
     h2 {
-      font-size: 1.75rem; } }
+      font-size: 2rem; } }
 
 h3 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.4;
   font-weight: 600; }
   @media only screen and (min-width: 768px) {
     h3 {
       font-size: 1.5rem; } }
 
-h3 {
+h4 {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 600; }
   @media only screen and (min-width: 768px) {
-    h3 {
-      font-size: 1.3rem; } }
+    h4 {
+      font-size: 1.35rem; } }
 
-h4, h5, h6 {
+h5, h6 {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 600; }
   @media only screen and (min-width: 768px) {
-    h4, h5, h6 {
+    h5, h6 {
       font-size: 1.25rem; } }
 
 ul, ol {
@@ -261,7 +265,8 @@ header {
   padding: 0.81875rem; }
 
 .header-sticky {
-  box-shadow: 0 0.05rem 0.3rem #00000026, 0 0 6rem 2rem #eceff1, 0 -1rem 4rem 1rem #eceff1; }
+  box-shadow: 0 0.05rem 0.3rem #00000026, 0 0 5rem 2rem #ffffff, 0 -1rem 3.5rem 1rem #ffffff;
+  transform: scale(1.02) translateY(-3px); }
 
 .header #header-closebutton {
   position: absolute;
@@ -290,10 +295,13 @@ header {
     .stage {
       background-size: 14rem; } }
   .stage-title {
-    width: 80%;
+    width: 95%;
     margin-top: 1.5rem; }
     .stage-title p {
       font-weight: 400; }
+    @media only screen and (min-width: 480px) {
+      .stage-title {
+        width: 80%; } }
   .stage-subscribe {
     margin-top: 2rem; }
     .stage-subscribe .podcast-subscribe-podigee {
@@ -393,7 +401,7 @@ header {
       margin-left: auto; } }
   .teaser-grid-item {
     width: 100%;
-    background-color: #eceff1;
+    background-color: #f1eeec;
     margin-bottom: 2rem; }
   .teaser-grid .button {
     font-size: 0.75rem;
@@ -422,7 +430,7 @@ header {
 .podcast-teaser {
   position: relative;
   padding: 1rem;
-  background-color: #eceff1;
+  background-color: #f1eeec;
   display: flex;
   flex-wrap: wrap;
   justify-content: left; }
@@ -485,7 +493,7 @@ header {
       left: 0;
       width: 100%;
       height: 8rem;
-      background-image: linear-gradient(rgba(255, 255, 255, 0), #eceff1); }
+      background-image: linear-gradient(rgba(255, 255, 255, 0), #f1eeec); }
   .podcast-teaser a.button.-secondary {
     margin-left: 1rem; }
 
@@ -612,7 +620,7 @@ div.podigee-player {
       align-items: center; }
   .footer-navigation {
     padding: 1rem;
-    background-color: #eceff1;
+    background-color: #f1eeec;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
