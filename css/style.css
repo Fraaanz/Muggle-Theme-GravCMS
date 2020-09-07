@@ -62,7 +62,10 @@ a.button {
       font-size: 1rem;
       padding: 0.7rem 1.75rem; } }
   a.button:hover {
-    box-shadow: 0 0 0.5rem #dd0757; }
+    box-shadow: 0 0 1.5rem #dd0757; }
+    @media only screen and (min-width: 768px) {
+      a.button:hover {
+        box-shadow: 0 0 0.5rem #dd0757; } }
   a.button.-secondary {
     background-color: transparent;
     color: #dd0757; }
@@ -406,7 +409,8 @@ header {
   .teaser-grid .button {
     font-size: 0.75rem;
     margin-top: 1rem;
-    padding: 0.5rem 1.25rem; }
+    padding: 0.5rem 1.25rem;
+    z-index: 1; }
   .teaser-grid > .button {
     margin: auto; }
   @media only screen and (min-width: 768px) {
