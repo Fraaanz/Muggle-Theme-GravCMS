@@ -1,7 +1,7 @@
 name: Muggle Theme
 slug: muggle-theme
 type: plugin
-version: 1.0.1
+version: 1.0.2
 description: Simple podcast landing page theme.
 icon: microphone
 author:
@@ -33,8 +33,12 @@ form:
 
     podcastSubscribeTitle:
       type: spacer
-      title: Podcast subscribe links
+      title: Podcast basic setting (for subcribe button, feed URL, ...)
       text: Here you can enter your podcast subcribe urls.
+    podcastSubscribe.feedURL:
+      type: text
+      label: Feed URL
+      placeholder: https://meetingmuggles.podigee.io/feed/mp3   
     podcastSubscribe.itunesLabel:
       type: text
       label: iTunes button label
@@ -79,7 +83,7 @@ form:
           lint: true
     socialMediaAccountTitle:
       type: spacer
-      title: Social Media Accounts
+      title: Social media accounts
       text: Here you can enter your social media account urls.
     socialMediaAccount.instagramLabel:
       type: text
@@ -105,6 +109,25 @@ form:
       type: text
       label: LinkedIn profile URL
       placeholder: https://www.linkedin.com/in/your-profile-name/
+    socialMediaSharingTitle:
+      type: spacer
+      title: Social sharing (open praph tags)
+      text: Content to be transferred when sharing the page. The image requirements vary from time to time and from platform to platform. Make sure that the main content of your sharing image is placed in the billeting and use a resolution of 1920*1080 pixels. Then it should work on most platforms.
+    socialMediaSharing.title:
+      type: text
+      label: Short expressive title
+      placeholder: Meeting Muggles – The podcast about Harry Potter, politics and psycho stuff.
+    socialMediaSharing.description:
+      type: text
+      label: Short description (max. 200 char)
+      placeholder: Lorem ipsum dolor ...
+    socialMediaSharing.image:
+      type: file
+      label: Sharing image
+      destination: 'user/pages/og-images'
+      multiple: false
+      accept:
+        - image/*
     globalTextStrings:
       type: spacer
       title: Global text strings

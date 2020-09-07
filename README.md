@@ -1,7 +1,9 @@
-# 🧙‍♂️ Muggle Theme – 1.0.1
+# 🧙‍♂️ Muggle Theme – 1.0.2
 ## 📲 Simple podcast landing page theme
 
 *Stable with [Grav](http://github.com/getgrav/grav) v1.6.27*
+
+*[Changelog](https://github.com/Fraaanz/Muggle-Theme-GravCMS/raw/master/CHANGELOG.md)*
 
 | 📖 Description |  🖥 Preview |
 |:----|:---|

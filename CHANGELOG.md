@@ -34,6 +34,12 @@
     * Header animation improvements
     * Stage mobile text size improvements
     * Button hover states
+
+# v1.0.2
+##  09/07/2020
+
+1. [](#new)
+    * Open graph social share content (theme options)
     
     
       

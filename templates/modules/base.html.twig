@@ -5,25 +5,32 @@
     
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
-    <!--<link rel="alternate" type="application/rss+xml" title="Mein Podcast" href="https://meinpodcast.podigee.io/feed/mp3"/>-->
-        
+    
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title|e('html') }}" href="{{ theme_var('podcastSubscribe.feedURL') }}"/>
+    <meta property="og:title" content="{{ theme_var('socialMediaSharing.title') }}">
+    <meta property="og:site_name" content="{{ site.title|e('html') }}">
+    <meta property="og:url" content="{{ base_url_absolute }}">
+    <meta property="og:description" content="{{ theme_var('socialMediaSharing.description') }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ base_url_absolute }}/{{ theme_var('socialMediaSharing.image')|first.path  }}">
+
 		<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
-        {% block stylesheets %}
-            {% do assets.addCss('theme://templates/normalize.css') %}
-            {% do assets.addCss('theme://css/style.css') %}
-        {% endblock %}
+    {% block stylesheets %}
+        {% do assets.addCss('theme://templates/normalize.css') %}
+        {% do assets.addCss('theme://css/style.css') %}
+    {% endblock %}
 
-        {% block javascripts %}
-            {% do assets.addJs('jquery', 100) %}
-            {% do assets.addJs('theme://js/header.js', {group:'bottom'}) %}
-            {% do assets.addJs('theme://js/animations.js', {group:'bottom'}) %}
-        {% endblock %}
+    {% block javascripts %}
+        {% do assets.addJs('jquery', 100) %}
+        {% do assets.addJs('theme://js/header.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/animations.js', {group:'bottom'}) %}
+    {% endblock %}
 
-        {% block assets deferred %}
-            {{ assets.css()|raw }}
-            {{ assets.js()|raw }}
-        {% endblock %}
+    {% block assets deferred %}
+        {{ assets.css()|raw }}
+        {{ assets.js()|raw }}
+    {% endblock %}
 
 </head>
 <body class="{{ page.header.body_classes }}">
